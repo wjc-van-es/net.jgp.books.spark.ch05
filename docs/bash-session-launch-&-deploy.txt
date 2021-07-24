@@ -1,0 +1,1253 @@
+willem@willem-Latitude-5590:~$ history
+  994  sudo protonvpn s
+  995  shutdown -r now
+  996  shutdown now
+  997  sudo protonvpn s
+  998  sudo protonvpn -f c
+  999  sudo protonvpn s
+ 1000  sudo protonvpn d
+ 1001  sudo protonvpn s
+ 1002  shutdown now
+ 1003  sudo protonvpn s
+ 1004  sudo protonvpn -f c
+ 1005  sudo protonvpn s
+ 1006  sudo protonvpn d
+ 1007  sudo protonvpn s
+ 1008  shutdown now
+ 1009  sudo protonvpn s
+ 1010  sudo protonvpn s
+ 1011  sudo protonvpn d
+ 1012  shutdown now
+ 1013  sudo protonvpn s
+ 1014  shutdown -r now
+ 1015  sudo protonvpn s
+ 1016  sudo protonvpn -f c
+ 1017  sudo protonvpn s
+ 1018  curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
+ 1019  curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+ 1020  sudo apt-get update && sudo apt-get install spotify-client
+ 1021  sudo protonvpn s
+ 1022  sudo protonvpn d
+ 1023  sudo protonvpn s
+ 1024  shutdown now
+ 1025  docker ps
+ 1026  docker-compose -f docker/docker-compose.yml up
+ 1027  java --version
+ 1028  java -version
+ 1029  docker-compose -f docker/docker-compose.yml up
+ 1030  clear
+ 1031  docker-compose -f docker/docker-compose.yml up
+ 1032  docker-compose version
+ 1033  docker version
+ 1034  postgres --version
+ 1035  psql --version
+ 1036  echo $JASYPT_ENCRYPTOR_PASSWORD
+ 1037  cd /home/willem/resources/softwareInstall/Postman
+ 1038  sha512sum Postman\ Agent-linux-x64-0.3.3.tar.gz
+ 1039  clear
+ 1040  sudo ss -tulpn | grep LISTEN
+ 1041  sudo lsof -i -P -n | grep LISTEN
+ 1042  sudo lsof -i 5432
+ 1043  sudo lsof -i:5432
+ 1044  sudo lsof -i:5400
+ 1045  sudo ss -tulwn | grep LISTEN
+ 1046  cd /usr/bin
+ 1047  ls -rtl
+ 1048  clear
+ 1049  /usr/bin/pg_dump --host localhost --port 5432 --username "postgres" --role "postgres" --no-password  --format plain --section pre-data --section data --section post-data --encoding UTF8 --column-inserts --verbose --file "/home/willem/resources/DonaldDuckPages/output/inducks_lib_schema_export/inducks_lib_schema_data_20210426_INSERTS_Complete_BK.sql" --schema "inducks_lib_schema" "postgres"
+ 1050  pg_dump: last built-in OID is 16383
+ 1051  pg_dump: reading extensions
+ 1052  pg_dump: identifying extension members
+ 1053  pg_dump: reading schemas
+ 1054  pg_dump: reading user-defined tables
+ 1055  pg_dump: reading user-defined functions
+ 1056  pg_dump: reading user-defined types
+ 1057  pg_dump: reading procedural languages
+ 1058  pg_dump: reading user-defined aggregate functions
+ 1059  pg_dump: reading user-defined operators
+ 1060  pg_dump: reading user-defined access methods
+ 1061  pg_dump: reading user-defined operator classes
+ 1062  pg_dump: reading user-defined operator families
+ 1063  pg_dump: reading user-defined text search parsers
+ 1064  pg_dump: reading user-defined text search templates
+ 1065  pg_dump: reading user-defined text search dictionaries
+ 1066  pg_dump: reading user-defined text search configurations
+ 1067  pg_dump: reading user-defined foreign-data wrappers
+ 1068  pg_dump: reading user-defined foreign servers
+ 1069  pg_dump: reading default privileges
+ 1070  pg_dump: reading user-defined collations
+ 1071  pg_dump: reading user-defined conversions
+ 1072  pg_dump: reading type casts
+ 1073  pg_dump: reading transforms
+ 1074  pg_dump: reading table inheritance information
+ 1075  pg_dump: reading event triggers
+ 1076  pg_dump: finding extension tables
+ 1077  pg_dump: finding inheritance relationships
+ 1078  pg_dump: reading column info for interesting tables
+ 1079  pg_dump: finding the columns and types of table "inducks_lib_schema.author"
+ 1080  pg_dump: finding the columns and types of table "inducks_lib_schema.story"
+ 1081  pg_dump: finding check constraints for table "inducks_lib_schema.story"
+ 1082  pg_dump: finding the columns and types of table "inducks_lib_schema.author_story"
+ 1083  pg_dump: finding check constraints for table "inducks_lib_schema.author_story"
+ 1084  pg_dump: finding the columns and types of table "inducks_lib_schema.publisher"
+ 1085  pg_dump: finding the columns and types of table "inducks_lib_schema.series"
+ 1086  pg_dump: finding the columns and types of table "inducks_lib_schema.publisher_series"
+ 1087  pg_dump: finding the columns and types of table "inducks_lib_schema.publication"
+ 1088  pg_dump: finding the columns and types of table "inducks_lib_schema.publication_dates"
+ 1089  pg_dump: finding the columns and types of table "inducks_lib_schema.story_publication"
+ 1090  pg_dump: finding the columns and types of table "inducks_lib_schema.pub_story_authors_summary"
+ 1091  pg_dump: flagging inherited columns in subtables
+ 1092  pg_dump: reading indexes
+ 1093  pg_dump: reading indexes for table "inducks_lib_schema.author"
+ 1094  pg_dump: reading indexes for table "inducks_lib_schema.story"
+ 1095  pg_dump: reading indexes for table "inducks_lib_schema.author_story"
+ 1096  pg_dump: reading indexes for table "inducks_lib_schema.publisher"
+ 1097  pg_dump: reading indexes for table "inducks_lib_schema.series"
+ 1098  pg_dump: reading indexes for table "inducks_lib_schema.publisher_series"
+ 1099  pg_dump: reading indexes for table "inducks_lib_schema.publication"
+ 1100  pg_dump: reading indexes for table "inducks_lib_schema.publication_dates"
+ 1101  pg_dump: reading indexes for table "inducks_lib_schema.story_publication"
+ 1102  pg_dump: reading extended statistics
+ 1103  pg_dump: reading constraints
+ 1104  pg_dump: reading foreign key constraints for table "inducks_lib_schema.author"
+ 1105  pg_dump: reading foreign key constraints for table "inducks_lib_schema.story"
+ 1106  pg_dump: reading foreign key constraints for table "inducks_lib_schema.author_story"
+ 1107  pg_dump: reading foreign key constraints for table "inducks_lib_schema.publisher"
+ 1108  pg_dump: reading foreign key constraints for table "inducks_lib_schema.series"
+ 1109  pg_dump: reading foreign key constraints for table "inducks_lib_schema.publisher_series"
+ 1110  pg_dump: reading foreign key constraints for table "inducks_lib_schema.publication"
+ 1111  pg_dump: reading foreign key constraints for table "inducks_lib_schema.publication_dates"
+ 1112  pg_dump: reading foreign key constraints for table "inducks_lib_schema.story_publication"
+ 1113  pg_dump: reading triggers
+ 1114  pg_dump: reading triggers for table "inducks_lib_schema.author"
+ 1115  pg_dump: reading triggers for table "inducks_lib_schema.story"
+ 1116  pg_dump: reading triggers for table "inducks_lib_schema.author_story"
+ 1117  pg_dump: reading triggers for table "inducks_lib_schema.publisher"
+ 1118  pg_dump: reading triggers for table "inducks_lib_schema.series"
+ 1119  pg_dump: reading triggers for table "inducks_lib_schema.publisher_series"
+ 1120  pg_dump: reading triggers for table "inducks_lib_schema.publication"
+ 1121  pg_dump: reading triggers for table "inducks_lib_schema.publication_dates"
+ 1122  pg_dump: reading triggers for table "inducks_lib_schema.story_publication"
+ 1123  pg_dump: reading rewrite rules
+ 1124  pg_dump: reading policies
+ 1125  pg_dump: reading row security enabled for table "inducks_lib_schema.author_seq"
+ 1126  pg_dump: reading policies for table "inducks_lib_schema.author_seq"
+ 1127  pg_dump: reading row security enabled for table "inducks_lib_schema.publication_dates_seq"
+ 1128  pg_dump: reading policies for table "inducks_lib_schema.publication_dates_seq"
+ 1129  pg_dump: reading row security enabled for table "inducks_lib_schema.publication_seq"
+ 1130  pg_dump: reading policies for table "inducks_lib_schema.publication_seq"
+ 1131  pg_dump: reading row security enabled for table "inducks_lib_schema.publisher_seq"
+ 1132  pg_dump: reading policies for table "inducks_lib_schema.publisher_seq"
+ 1133  pg_dump: reading row security enabled for table "inducks_lib_schema.series_seq"
+ 1134  pg_dump: reading policies for table "inducks_lib_schema.series_seq"
+ 1135  pg_dump: reading row security enabled for table "inducks_lib_schema.story_seq"
+ 1136  pg_dump: reading policies for table "inducks_lib_schema.story_seq"
+ 1137  pg_dump: reading row security enabled for table "inducks_lib_schema.author"
+ 1138  pg_dump: reading policies for table "inducks_lib_schema.author"
+ 1139  pg_dump: reading row security enabled for table "inducks_lib_schema.story"
+ 1140  pg_dump: reading policies for table "inducks_lib_schema.story"
+ 1141  pg_dump: reading row security enabled for table "inducks_lib_schema.author_story"
+ 1142  pg_dump: reading policies for table "inducks_lib_schema.author_story"
+ 1143  pg_dump: reading row security enabled for table "inducks_lib_schema.publisher"
+ 1144  pg_dump: reading policies for table "inducks_lib_schema.publisher"
+ 1145  pg_dump: reading row security enabled for table "inducks_lib_schema.series"
+ 1146  pg_dump: reading policies for table "inducks_lib_schema.series"
+ 1147  pg_dump: reading row security enabled for table "inducks_lib_schema.publisher_series"
+ 1148  pg_dump: reading policies for table "inducks_lib_schema.publisher_series"
+ 1149  pg_dump: reading row security enabled for table "inducks_lib_schema.publication"
+ 1150  pg_dump: reading policies for table "inducks_lib_schema.publication"
+ 1151  pg_dump: reading row security enabled for table "inducks_lib_schema.publication_dates"
+ 1152  pg_dump: reading policies for table "inducks_lib_schema.publication_dates"
+ 1153  pg_dump: reading row security enabled for table "inducks_lib_schema.story_publication"
+ 1154  pg_dump: reading policies for table "inducks_lib_schema.story_publication"
+ 1155  pg_dump: reading row security enabled for table "inducks_lib_schema.pub_story_authors_summary"
+ 1156  pg_dump: reading policies for table "inducks_lib_schema.pub_story_authors_summary"
+ 1157  pg_dump: reading publications
+ 1158  pg_dump: reading publication membership
+ 1159  pg_dump: reading subscriptions
+ 1160  pg_dump: reading dependency data
+ 1161  pg_dump: saving encoding = UTF8
+ 1162  pg_dump: saving standard_conforming_strings = on
+ 1163  pg_dump: saving search_path =
+ 1164  pg_dump: creating SCHEMA "inducks_lib_schema"
+ 1165  pg_dump: creating TABLE "inducks_lib_schema.author"
+ 1166  pg_dump: creating SEQUENCE "inducks_lib_schema.author_seq"
+ 1167  pg_dump: creating TABLE "inducks_lib_schema.author_story"
+ 1168  pg_dump: creating TABLE "inducks_lib_schema.publication"
+ 1169  pg_dump: creating TABLE "inducks_lib_schema.series"
+ 1170  pg_dump: creating TABLE "inducks_lib_schema.story"
+ 1171  pg_dump: creating TABLE "inducks_lib_schema.story_publication"
+ 1172  pg_dump: creating VIEW "inducks_lib_schema.pub_story_authors_summary"
+ 1173  pg_dump: creating TABLE "inducks_lib_schema.publication_dates"
+ 1174  pg_dump: creating SEQUENCE "inducks_lib_schema.publication_dates_seq"
+ 1175  pg_dump: creating SEQUENCE "inducks_lib_schema.publication_seq"
+ 1176  pg_dump: creating TABLE "inducks_lib_schema.publisher"
+ 1177  pg_dump: creating SEQUENCE "inducks_lib_schema.publisher_seq"
+ 1178  pg_dump: creating TABLE "inducks_lib_schema.publisher_series"
+ 1179  pg_dump: creating SEQUENCE "inducks_lib_schema.series_seq"
+ 1180  pg_dump: creating SEQUENCE "inducks_lib_schema.story_seq"
+ 1181  pg_dump: processing data for table "inducks_lib_schema.author"
+ 1182  pg_dump: processing data for table "inducks_lib_schema.author_story"
+ 1183  pg_dump: processing data for table "inducks_lib_schema.publication"
+ 1184  pg_dump: processing data for table "inducks_lib_schema.publication_dates"
+ 1185  pg_dump: processing data for table "inducks_lib_schema.publisher"
+ 1186  pg_dump: processing data for table "inducks_lib_schema.publisher_series"
+ 1187  pg_dump: processing data for table "inducks_lib_schema.series"
+ 1188  pg_dump: processing data for table "inducks_lib_schema.story"
+ 1189  pg_dump: processing data for table "inducks_lib_schema.story_publication"
+ 1190  pg_dump: executing SEQUENCE SET author_seq
+ 1191  pg_dump: executing SEQUENCE SET publication_dates_seq
+ 1192  pg_dump: executing SEQUENCE SET publication_seq
+ 1193  pg_dump: executing SEQUENCE SET publisher_seq
+ 1194  pg_dump: executing SEQUENCE SET series_seq
+ 1195  pg_dump: executing SEQUENCE SET story_seq
+ 1196  pg_dump: creating CONSTRAINT "inducks_lib_schema.author author_pkey"
+ 1197  pg_dump: creating CONSTRAINT "inducks_lib_schema.author_story author_story_pkey"
+ 1198  pg_dump: creating CONSTRAINT "inducks_lib_schema.publication_dates publication_dates_pkey"
+ 1199  pg_dump: creating CONSTRAINT "inducks_lib_schema.publication publication_pkey"
+ 1200  pg_dump: creating CONSTRAINT "inducks_lib_schema.publisher publisher_pkey"
+ 1201  pg_dump: creating CONSTRAINT "inducks_lib_schema.publisher_series publisher_series_pkey"
+ 1202  pg_dump: creating CONSTRAINT "inducks_lib_schema.series series_pkey"
+ 1203  pg_dump: creating CONSTRAINT "inducks_lib_schema.story story_pkey"
+ 1204  pg_dump: creating CONSTRAINT "inducks_lib_schema.story_publication story_publication_pkey"
+ 1205  pg_dump: creating CONSTRAINT "inducks_lib_schema.author unq_author_code"
+ 1206  pg_dump: creating CONSTRAINT "inducks_lib_schema.author unq_author_url"
+ 1207  pg_dump: creating CONSTRAINT "inducks_lib_schema.publication unq_publication_code"
+ 1208  pg_dump: creating CONSTRAINT "inducks_lib_schema.publication unq_publication_url"
+ 1209  pg_dump: creating CONSTRAINT "inducks_lib_schema.publisher unq_publisher_code"
+ 1210  pg_dump: creating CONSTRAINT "inducks_lib_schema.publisher unq_publisher_url"
+ 1211  pg_dump: creating CONSTRAINT "inducks_lib_schema.series unq_series_code"
+ 1212  pg_dump: creating CONSTRAINT "inducks_lib_schema.series unq_series_url"
+ 1213  pg_dump: creating CONSTRAINT "inducks_lib_schema.story unq_story_code"
+ 1214  pg_dump: creating CONSTRAINT "inducks_lib_schema.story unq_story_url"
+ 1215  pg_dump: creating FK CONSTRAINT "inducks_lib_schema.author_story author_story_author_id_fkey"
+ 1216  pg_dump: creating FK CONSTRAINT "inducks_lib_schema.author_story author_story_story_id_fkey"
+ 1217  pg_dump: creating FK CONSTRAINT "inducks_lib_schema.publication_dates publication_dates_publication_id_fkey"
+ 1218  pg_dump: creating FK CONSTRAINT "inducks_lib_schema.publication publication_series_id_fkey"
+ 1219  pg_dump: creating FK CONSTRAINT "inducks_lib_schema.publisher_series publisher_series_publisher_id_fkey"
+ 1220  pg_dump: creating FK CONSTRAINT "inducks_lib_schema.publisher_series publisher_series_series_id_fkey"
+ 1221  pg_dump: creating FK CONSTRAINT "inducks_lib_schema.story_publication story_publication_publication_id_fkey"
+ 1222  pg_dump: creating FK CONSTRAINT "inducks_lib_schema.story_publication story_publication_story_id_fkey"
+ 1223  pg_dump: creating ACL "SCHEMA inducks_lib_schema"
+ 1224  pg_dump: creating ACL "inducks_lib_schema.TABLE author"
+ 1225  pg_dump: creating ACL "inducks_lib_schema.SEQUENCE author_seq"
+ 1226  pg_dump: creating ACL "inducks_lib_schema.TABLE author_story"
+ 1227  pg_dump: creating ACL "inducks_lib_schema.TABLE publication"
+ 1228  pg_dump: creating ACL "inducks_lib_schema.TABLE series"
+ 1229  pg_dump: creating ACL "inducks_lib_schema.TABLE story"
+ 1230  pg_dump: creating ACL "inducks_lib_schema.TABLE story_publication"
+ 1231  pg_dump: creating ACL "inducks_lib_schema.TABLE pub_story_authors_summary"
+ 1232  pg_dump: creating ACL "inducks_lib_schema.TABLE publication_dates"
+ 1233  pg_dump: creating ACL "inducks_lib_schema.SEQUENCE publication_dates_seq"
+ 1234  pg_dump: creating ACL "inducks_lib_schema.SEQUENCE publication_seq"
+ 1235  pg_dump: creating ACL "inducks_lib_schema.TABLE publisher"
+ 1236  pg_dump: creating ACL "inducks_lib_schema.SEQUENCE publisher_seq"
+ 1237  pg_dump: creating ACL "inducks_lib_schema.TABLE publisher_series"
+ 1238  pg_dump: creating ACL "inducks_lib_schema.SEQUENCE series_seq"
+ 1239  pg_dump: creating ACL "inducks_lib_schema.SEQUENCE story_seq"
+ 1240  Process returned exit code 0.
+ 1241  sudo /usr/bin/pg_dump --host localhost --port 5432 --username "postgres" --role "postgres" --no-password  --format plain --section pre-data --section data --section post-data --encoding UTF8 --column-inserts --verbose --file "/home/willem/resources/DonaldDuckPages/output/inducks_lib_schema_export/inducks_lib_schema_data_20210426_INSERTS_Complete_BK.sql" --schema "inducks_lib_schema" "postgres"
+ 1242  clear
+ 1243  cd ~
+ 1244  sudo protonvpn s
+ 1245  psql --version
+ 1246  docker image ps
+ 1247  docker image ls
+ 1248  docker ps
+ 1249  cd resources/git/manning-smia/chapter5
+ 1250  docker-compose down
+ 1251  docker-compose -f docker/docker-compose.yml down
+ 1252  docker ps
+ 1253  docker image ls
+ 1254  shutdown now
+ 1255  cd /var/lib/docker
+ 1256  ls -la
+ 1257  sudo ls -la
+ 1258  docker volume ls
+ 1259  docker volume rm 0bf8c0d14245a37b4d3cac1eda66ed8e55498e0017598de21326881ecf0b83e2
+ 1260  docker volume ls
+ 1261  sudo ls -la
+ 1262  docker volume prune
+ 1263  docker volume ls
+ 1264  sudo ls -la
+ 1265  cd volumes
+ 1266  sudo ls -la
+ 1267  exit
+ 1268  docker ps
+ 1269  docker image ls
+ 1270  docker volume ls
+ 1271  shutdown now
+ 1272  sudo protonvpn s
+ 1273  sudo protonvpn -f c
+ 1274  sudo protonvpn s
+ 1275  sudo protonvpn -f c
+ 1276  sudo protonvpn s
+ 1277  sudo protonvpn d
+ 1278  shutdown now
+ 1279  docker volume ls
+ 1280  cd /var/lib/docker
+ 1281  cd volumes
+ 1282  ls -la
+ 1283  sudo ls -la
+ 1284  docker volume ls
+ 1285  sudo ls -la
+ 1286  docker volume ls
+ 1287  docker volume prune
+ 1288  docker volume ls
+ 1289  sudo ls -la
+ 1290  docker volume prune
+ 1291  sudo ls -la
+ 1292  docker volume ls
+ 1293  docker volume prune
+ 1294  docker volume ls
+ 1295  sudo ls -la
+ 1296  exit
+ 1297  cd resources/git/manning-smia/chapter5
+ 1298  docker run -i --rm postgres cat /usr/share/postgresql/postgresql.conf.sample > my-postgres.conf
+ 1299  docker-compose -f docker/docker-compose.yml down
+ 1300  ps -f -u postgres
+ 1301  sudo lsof -n -u postgres |grep LISTEN or sudo netstat -ltnp | grep postgres
+ 1302  sudo lsof -n -u postgres |grep LISTEN
+ 1303  sudo netstat -ltnp | grep postgres
+ 1304  psql -h localhost -p 5400
+ 1305  psql --help
+ 1306  psql -h localhost -p 5400 -U postgres
+ 1307  docker ps
+ 1308  psql -h 0.0.0.0 -p 5400 -U postgres
+ 1309  psql -h 0.0.0.0 -p 5400 -U postgres -d ostock_dev
+ 1310  docker ps
+ 1311  boot2docker ip
+ 1312  docker network ls
+ 1313  history | grep 'docker network'
+ 1314  docker network inspect docker_backend
+ 1315  docker-compose -f docker/docker-compose.yml down
+ 1316  docker network inspect docker_backend
+ 1317  shutdown now
+ 1318  sudo protonvpn s
+ 1319  sudo protonvpn -f c
+ 1320  sudo protonvpn s
+ 1321  sudo protonvpn -f c
+ 1322  sudo protonvpn s
+ 1323  sudo protonvpn d
+ 1324  sudo protonvpn s
+ 1325  shutdown now
+ 1326  docker -version
+ 1327  docker version
+ 1328  docker node ls
+ 1329  docker swarm leave
+ 1330  docker swarm leave --force
+ 1331  docker node ls
+ 1332  docker network ls
+ 1333  docker network inspect docker_backend
+ 1334  cd /var/lib/docker
+ 1335  sudo ls -la
+ 1336  cd volumes
+ 1337  sudo ls -la
+ 1338  docker volume ls
+ 1339  docker volume prune
+ 1340  docker volume ls
+ 1341  sudo ls -la
+ 1342  exit
+ 1343  cd resources/git/manning-smia/chapter5
+ 1344  docker-compose -f docker/docker-compose.yml down
+ 1345  exit
+ 1346  shutdown now
+ 1347  sudo protonvpn s
+ 1348  sudo protonvpn -f c
+ 1349  sudo protonvpn s
+ 1350  sudo protonvpn -f c
+ 1351  sudo protonvpn s
+ 1352  sudo protonvpn d
+ 1353  sudo protonvpn s
+ 1354  shutdown now
+ 1355  docker ps
+ 1356  exit
+ 1357  docker ls -a
+ 1358  docker ps -a
+ 1359  history | grep 'oracle'
+ 1360  docker start oracle
+ 1361  docker ps oracle
+ 1362  docker ps
+ 1363  docker pull store/oracle/database-enterprise:12.2.0.1-slim
+ 1364  docker stop oracle
+ 1365  docker ps
+ 1366  docker ps -a
+ 1367  docker rm oracle
+ 1368  docker ps -a
+ 1369  docker image ls
+ 1370  docker run -d -it --name oracle -p 1521:1521 -v /home/willem/docker-volumes/OracleDBData:/ORCL store/oracle/database-enterprise:12.2.0.1-slim
+ 1371  docker ps -a
+ 1372  docker stop oracle
+ 1373  docker ps -a
+ 1374  shutdown now
+ 1375  sudo protonvpn s
+ 1376  sudo protonvpn -f c
+ 1377  sudo protonvpn s
+ 1378  sudo protonvpn d
+ 1379  shutdown -r now
+ 1380  sudo protonvpn s
+ 1381  sudo protonvpn -f c
+ 1382  sudo protonvpn s
+ 1383  sudo protonvpn -f c
+ 1384  sudo protonvpn -d c
+ 1385  sudo protonvpn -r c
+ 1386  sudo protonvpn s
+ 1387  sudo protonvpn d
+ 1388  sudo protonvpn s
+ 1389  shutdown now
+ 1390  sudo protonvpn s
+ 1391  sudo protonvpn -f c
+ 1392  sudo protonvpn s
+ 1393  sudo protonvpn d
+ 1394  sudo protonvpn s
+ 1395  shutdown now
+ 1396  inxi -p
+ 1397  df -h /dev/nvme0n1p2
+ 1398  journalctl --disk-usage
+ 1399  sudo journalctl --vacuum-time=3d
+ 1400  journalctl --disk-usage
+ 1401  sudo apt autoremove
+ 1402  df -h /dev/nvme0n1p2
+ 1403  clear
+ 1404  sudo add-apt-repository ppa:serge-rider/dbeaver-ce
+ 1405  sudo apt-get update
+ 1406  sudo apt-get install dbeaver-ce
+ 1407  df -h /dev/nvme0n1p2
+ 1408  shutdown -r now
+ 1409  shutdown now
+ 1410  cd /usr/bin
+ 1411  sudo ls -la
+ 1412  sudo ls -la | grep 'docker'
+ 1413  cd /usr/local/bin
+ 1414  sudo ls -la | grep 'docker'
+ 1415  cd /var/lib/docker
+ 1416  ls -la
+ 1417  sudo ls -la
+ 1418  cd containers
+ 1419  sudo ls -la
+ 1420  cd ../image
+ 1421  cd ../volumes
+ 1422  sudo ls -la
+ 1423  docker volume ls
+ 1424  sudo ls -la
+ 1425  docker volume ls
+ 1426  sudo ls -la
+ 1427  docker volume rm 870f29bbab198ff426d24ab047a73d0c557a926d0226a280531eccf43d3903b1
+ 1428  docker volume rm a26558d1fcff0f552df0dce13fe16455050e0be2bb5f56c8221d8001d800ece5
+ 1429  docker volume rm c9778ae11be530db7b40c7e1946a8d919c5f38c07a52670108bcbc72895c3a72
+ 1430  docker volume rm ce0c313c76db85d92076e59e8a1802ca9ed646575c2d741ce4cd861c92c4eb98
+ 1431  sudo ls -la
+ 1432  docker volume ls
+ 1433  docker volume rm 32e29de47cebbf076caf762fd6f1327c874a4bd133919ad9e51d25a0670bb4e2
+ 1434  docker volume rm d2352bd06d7f94784858400955385a71c1ebac4d174682f27352d8736d0cdaf9
+ 1435  docker volume rm f0
+ 1436  docker volume rm f0abff7a991e90105de9611eefb6ab22a7f81d33bb7ce0100ceab3cff511e97f
+ 1437  docker volume rm fc036ff34f43c707e89b81f629229c853d3bcfad639caec6c38adf131d552ee7
+ 1438  docker volume ls
+ 1439  docker volume rm d256001f2f116f115183d75417da0ea3b3a9b9838e106b54d6ff2650160bc6b1
+ 1440  docker volume rm fc6c3e4218c60dbddf47ba7287b2b42e8a054c8ea4cc3e6aba0dd41cf163d69b
+ 1441  docker volume ls
+ 1442  cd 03d8fc128f372df7cbda517c4698038745c784b8646132e72a3da6ae79ffed56
+ 1443  ls -la
+ 1444  sudo ls -la
+ 1445  cd _data
+ 1446  sudo ls -la
+ 1447  cd ../..
+ 1448  cd 967b6d480a3cc6ad2214f181cec45003db930f6aa8ecfc89a7f63e015c88e65a
+ 1449  sudo ls -la
+ 1450  cd _data
+ 1451  docker volume ls
+ 1452  cd ../..
+ 1453  docker volume ls | grep -v 'smia-ch5-postgres-volume'
+ 1454  docker volume rm $(docker volume ls | grep -v 'smia-ch5-postgres-volume')
+ 1455  docker volume ls | grep -v 'smia-ch5-postgres-volume'
+ 1456  docker volume ls | grep -v 'DRIVER|smia-ch5-postgres-volume'
+ 1457  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume'
+ 1458  docker volume ls
+ 1459  docker volume ls | grep -v 'smia-ch5-postgres-volume'
+ 1460  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume'
+ 1461  docker volume rm $(docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume')
+ 1462  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | cut -f2
+ 1463  docker volume ls
+ 1464  docker volume ls | grep -v 'smia-ch5-postgres-volume'
+ 1465  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume'
+ 1466  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | cut -f2
+ 1467  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | cut -f1
+ 1468  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | cut -f3
+ 1469  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | cut -d' ' -f2
+ 1470  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | cut -d' ' -f1
+ 1471  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | cut -d' ' -f3
+ 1472  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | cut -d'\t' -f2
+ 1473  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | cut -d$'\t' -f2
+ 1474  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | cut -d$'\t' -f1
+ 1475  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | cut -d$'\t' -f3
+ 1476  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | cut -d$'\t' -f 1
+ 1477  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | cut -f 1
+ 1478  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | cut -f 2
+ 1479  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | cut -d \t -f 2
+ 1480  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | awk 'NR>1 {print $1}'
+ 1481  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | awk 'NR>1 {print $2}'
+ 1482  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | awk '{print $2}'
+ 1483  clear
+ 1484  docker volume ls
+ 1485  docker volume ls | grep -v 'smia-ch5-postgres-volume'
+ 1486  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume'
+ 1487  docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | awk '{print $2}'
+ 1488  docker volume rm $(docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | awk '{print $2}')
+ 1489  docker volume ls
+ 1490  docker images
+ 1491  cd /home/willem/resources/git/manning-smia/chapter5/configserver
+ 1492  docker build -t wjcvanes/configserver:0.0.1-SNAPSHOT
+ 1493  docker build -t wjcvanes/configserver:0.0.1-SNAPSHOT .
+ 1494  cd ../licensing-service/
+ 1495  docker build -t wjcvanes/licensing-service:0.0.2-SNAPSHOT .
+ 1496  docker login
+ 1497  sudo apt install gnupg2 pass
+ 1498  docker login
+ 1499  exit
+ 1500  docker inspect
+ 1501  docker inspect --help
+ 1502  docker ps
+ 1503  docker ps -a
+ 1504  docker run oracle
+ 1505  docker start oracle
+ 1506  docker ps -a
+ 1507  cd resources/git/manning-smia/chapter5
+ 1508  docker-compose down
+ 1509  docker-compose -f docker/docker-compose.yml down
+ 1510  exit
+ 1511  history | grep 'docker -v'
+ 1512  history | grep 'docker.*-v'
+ 1513  history | grep 'docker.*-v '
+ 1514  docker compose ls
+ 1515  docker-compose ls
+ 1516  exit
+ 1517  docker login
+ 1518  docker-compose -f docker/docker-compose.yml down
+ 1519  history | grep 'docker'
+ 1520  cd docker/
+ 1521  docker-compose down
+ 1522  docker ps -a
+ 1523  docker rm 3d850970104c 0c3f2814c7e9
+ 1524  docker ps -a
+ 1525  exit
+ 1526  docker image ls
+ 1527  docker image ls | grep '12.2.0.1-slim'
+ 1528  docker image ls | grep -v '12.2.0.1-slim'
+ 1529  docker image ls | grep -Ev 'REPOSITORY|12.2.0.1-slim'
+ 1530  docker image ls | grep -Ev 'REPOSITORY|11-slim|12.2.0.1-slim'
+ 1531  docker image ls
+ 1532  docker image ls | grep -Ev 'REPOSITORY|postgres|11-slim|12.2.0.1-slim' | awk '{print $3}'
+ 1533  docker rmi --no-prune $(docker image ls | grep -Ev 'REPOSITORY|postgres|11-slim|12.2.0.1-slim' | awk '{print $3}')
+ 1534  docker image ls
+ 1535  docker rmi --force python:alpine
+ 1536  docker image ls
+ 1537  docker rmi --no-prune $(docker image ls | grep -Ev 'REPOSITORY|postgres|11-slim|12.2.0.1-slim' | awk '{print $3}')
+ 1538  docker image ls
+ 1539  exit
+ 1540  sudo protovpn s
+ 1541  sudo protonvpn s
+ 1542  shutdown -r now
+ 1543  sudo protonvpn s
+ 1544  sudo protonvpn -f c
+ 1545  sudo protonvpn s
+ 1546  sudo protonvpn d
+ 1547  sudo protonvpn -f c
+ 1548  sudo protonvpn s
+ 1549  sudo protonvpn d
+ 1550  sudo protonvpn s
+ 1551  shutdown now
+ 1552  docker cp human_resources/ oracle:/tmp/hr
+ 1553  docker cp human_resources/ oracle:/u01/app/oracle/product/12.2.0/dbhome_1
+ 1554  docker logs -f oracle
+ 1555  docker exec -it oracle bash
+ 1556  $ docker exec -it oracle bash
+ 1557  docker exec -it oracle bash
+ 1558  exit
+ 1559  history | grep 'docker cp'
+ 1560  history | grep 'docker exec'
+ 1561  history | grep 'docker exec '
+ 1562  docker exec -it oracle bash
+ 1563  exit
+ 1564  exit
+ 1565  docker exec -it oracle bash
+ 1566  exit
+ 1567  docker exec -u root --workdir / -ti oracle /bin/sh
+ 1568  exit
+ 1569  docker logs -f oracle
+ 1570  exit
+ 1571  docker ps
+ 1572  docker ps -a
+ 1573  docker start oracle
+ 1574  docker ps
+ 1575  docker stop oracle
+ 1576  docker start oracle
+ 1577  docker ps
+ 1578  docker stop oracle
+ 1579  docker start oracle
+ 1580  docker ps
+ 1581  docker stop oracle
+ 1582  docker ps
+ 1583  exit
+ 1584  shutdown now
+ 1585  sudo protonvpn s
+ 1586  sudo protonvpn -f c
+ 1587  sudo protonvpn s
+ 1588  sudo protonvpn -f c
+ 1589  sudo protonvpn s
+ 1590  sudo protonvpn d
+ 1591  shutdown now
+ 1592  docker ps -a
+ 1593  docker start oracle
+ 1594  docker ps -a
+ 1595  docker stop oracle
+ 1596  docker ps -a
+ 1597  shutdown now
+ 1598  sudo protonvpn -f c
+ 1599  sudo protonvpn s
+ 1600  sudo protonvpn d
+ 1601  sudo protonvpn s
+ 1602  shutdown now
+ 1603  echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all"     | sudo tee -a /etc/apt/sources.list.d/insomnia.list
+ 1604  sudo apt-get update
+ 1605  sudo apt-get install insomnia
+ 1606  docker volume ls
+ 1607  docker volume rm $(docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | awk '{print $2}')
+ 1608  docker volume ls
+ 1609  docker volume rm $(docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | awk '{print $2}')
+ 1610  docker volume ls
+ 1611  docker image ls
+ 1612  docker rmi --no-prune $(docker image ls | grep -Ev 'REPOSITORY|postgres|11-slim|12.2.0.1-slim' | awk '{print $3}')
+ 1613  docker image ls
+ 1614  docker rmi --no-prune $(docker image ls | grep -Ev 'REPOSITORY|postgres|11-slim|12.2.0.1-slim' | awk '{print $3}')
+ 1615  docker image ls
+ 1616  docker volume ls
+ 1617  docker volume rm $(docker volume ls | grep -Ev 'DRIVER|smia-ch5-postgres-volume' | awk '{print $2}')
+ 1618  docker volume ls
+ 1619  shutdown now
+ 1620  sudo protonvpn -f c
+ 1621  sudo protonvpn s
+ 1622  sudo protonvpn d
+ 1623  sudo protonvpn s
+ 1624  shutdown now
+ 1625  sudo protonvpn -f c
+ 1626  sudo protonvpn s
+ 1627  sudo protonvpn d
+ 1628  sudo protonvpn s
+ 1629  shutdown now
+ 1630  sudo protonvpn -f c
+ 1631  sudo protonvpn s
+ 1632  sudo protonvpn d
+ 1633  sudo protonvpn s
+ 1634  shutdown now
+ 1635  sudo protonvpn s
+ 1636  sudo protonvpn -f c
+ 1637  sudo protonvpn s
+ 1638  sudo protonvpn d
+ 1639  sudo protonvpn s
+ 1640  shutdown now
+ 1641  sudo protonvpn s
+ 1642  sudo protonvpn -f c
+ 1643  sudo protonvpn s
+ 1644  sudo protonvpn d
+ 1645  sudo protonvpn s
+ 1646  shutdown now
+ 1647  pwd
+ 1648  echo $JAVA_HOME
+ 1649  echo $SPARK_HOME
+ 1650  echo $PATH
+ 1651  pyspark
+ 1652  conda init
+ 1653  conda init base
+ 1654  conda activate base
+ 1655  python --version
+ 1656  java -version
+ 1657  jupyter --version
+ 1658  pyspark
+ 1659  exit
+ 1660  history | grep 'conda'
+ 1661  conda activate base
+ 1662  python --version
+ 1663  java --version
+ 1664  java -version
+ 1665  jupyter --version
+ 1666  cd /home/willem/resources/softwareInstall/Spark_2
+ 1667  sha512sum spark-2.4.8-bin-hadoop2.7.tgz
+ 1668  cd ~/App/
+ 1669  tar -xvzf ../resources/softwareInstall/Spark_2/spark-2.4.8-bin-hadoop2.7.tgz
+ 1670  ls -la
+ 1671  cd /
+ 1672  sudo find . -name ".bash_profile" 2>/dev/null
+ 1673  sudo find . -name ".bashrc" 2>/dev/null
+ 1674  cd ~
+ 1675  vi .bashrc
+ 1676  history | grep 'conda'
+ 1677  conda deactivate
+ 1678  exit
+ 1679  conda activate base
+ 1680  pyspark
+ 1681  conda deactivate
+ 1682  pyspark
+ 1683  exit
+ 1684  cd /home/willem/resources/softwareInstall/Spark
+ 1685  sha512sum spark-3.1.1-bin-hadoop2.7.tgz
+ 1686  cd ~/App/
+ 1687  tar -xvzf ../resources/softwareInstall/Spark/spark-3.1.1-bin-hadoop2.7.tgz
+ 1688  ls -la
+ 1689  exit
+ 1690  conda activate base
+ 1691  echo $SPARK_HOME
+ 1692  echo $PATH
+ 1693  java -version
+ 1694  python --version
+ 1695  jupyter --version
+ 1696  pyspark
+ 1697  echo $PYSPARK_DRIVER_PYTHON_OPTS
+ 1698  exit
+ 1699  cd ../..
+ 1700  git clone git@bitbucket.org:wjc_van_es/ps-spark-2-gs.git
+ 1701  ls -la
+ 1702  cd ps-spark-2-gs/
+ 1703  ls -la
+ 1704  conda activate base
+ 1705  echo $PYSPARK_DRIVER_PYTHON_OPTS
+ 1706  pyspark
+ 1707  cd resources/git/ps-spark-2-gs/
+ 1708  cd 02/demo/code
+ 1709  cd 02/
+ 1710  ls -la
+ 1711  cd demos/code/
+ 1712  pyspark
+ 1713  conda deactivate
+ 1714  exit
+ 1715  conda activate base
+ 1716  python --version
+ 1717  jupyter --version
+ 1718  pyspark
+ 1719  conda deactivate
+ 1720  shutdown now
+ 1721  sudo protonvpn s
+ 1722  sudo protonvpn -f c
+ 1723  sudo protonvpn s
+ 1724  sudo protonvpn d
+ 1725  sudo protonvpn s
+ 1726  cd resources/git/ps-spark-2-gs/02
+ 1727  conda activate base
+ 1728  pyspark
+ 1729  conda deactivate
+ 1730  conda activate base
+ 1731  pyspark
+ 1732  conda deactivate
+ 1733  exit
+ 1734  cd /home/willem/Documents/zakelijk/financieel/ING/transacties
+ 1735  conda activate base
+ 1736  pyspark
+ 1737  conda deactivate
+ 1738  exit
+ 1739  shutdown now
+ 1740  sudo protonvpn s
+ 1741  sudo protonvpn -f c
+ 1742  sudo protonvpn s
+ 1743  sudo protonvpn d
+ 1744  sudo protonvpn s
+ 1745  shutdown now
+ 1746  shutdown -r now
+ 1747  lsb_release -a
+ 1748  hostnamectl
+ 1749  cat /etc/os-release
+ 1750  shutdown now
+ 1751  sudo protonvpn s
+ 1752  sudo protonvpn -f c
+ 1753  sudo protonvpn s
+ 1754  sudo protonvpn d
+ 1755  sudo protonvpn s
+ 1756  shutdown now
+ 1757  cd /home/willem/resources/git/ps-spark-2-gs/02/demos/code
+ 1758  conda activate base
+ 1759  pyspark
+ 1760  conda deactivate
+ 1761  shutdown now
+ 1762  sudo protonvpn s
+ 1763  sudo protonvpn -f c
+ 1764  sudo protonvpn s
+ 1765  sudo protonvpn d
+ 1766  sudo protonvpn s
+ 1767  shutdown now
+ 1768  cd /home/willem/resources/git/ps-spark-2-gs/02/demos/code
+ 1769  conda activate base
+ 1770  pyspark
+ 1771  conda deactivate
+ 1772  shutdown now
+ 1773  cd /home/willem/Documents/SoftwareDevelopment/PluralSight/DataAnalysis/spark-2-getting-started/02/demos/code
+ 1774  conda activate base
+ 1775  pyspark
+ 1776  conda deactivate
+ 1777  exit
+ 1778  shutdown now
+ 1779  sudo protonvpn s
+ 1780  sudo protonvpn -f c
+ 1781  sudo protonvpn s
+ 1782  sudo protonvpn d
+ 1783  shutdown now
+ 1784  shutdown -r now
+ 1785  sudo protonvpn s
+ 1786  sudo protonvpn -f c
+ 1787  sudo protonvpn s
+ 1788  sudo protonvpn d
+ 1789  sudo protonvpn s
+ 1790  shutdown now
+ 1791  history | grep 'postgres'
+ 1792  postgres --version
+ 1793  shutdown now
+ 1794  sudo protonvpn s
+ 1795  sudo protonvpn -f c
+ 1796  sudo protonvpn s
+ 1797  sudo protonvpn d
+ 1798  sudo protonvpn s
+ 1799  shutdown now
+ 1800  sudo protonvpn s
+ 1801  sudo protonvpn -f c
+ 1802  sudo protonvpn s
+ 1803  sudo protonvpn d
+ 1804  sudo protonvpn s
+ 1805  sudo protonvpn -f c
+ 1806  sudo protonvpn s
+ 1807  sudo protonvpn d
+ 1808  sudo protonvpn
+ 1809  sudo protonvpn s
+ 1810  shutdown now
+ 1811  sudo protonvpn -f c
+ 1812  sudo protonvpn s
+ 1813  sudo protonvpn -f c
+ 1814  sudo protonvpn s
+ 1815  sudo protonvpn d
+ 1816  shutdown now
+ 1817  sudo protonvpn s
+ 1818  sudo protonvpn -f c
+ 1819  sudo protonvpn s
+ 1820  sudo protonvpn d
+ 1821  sudo protonvpn s
+ 1822  shutdown now
+ 1823  sudo protonvpn -f c
+ 1824  sudo protonvpn s
+ 1825  sudo protonvpn d
+ 1826  exit
+ 1827  shutdown now
+ 1828  sudo protonvpn s
+ 1829  sudo protonvpn -f c
+ 1830  sudo protonvpn s
+ 1831  sudo protonvpn d
+ 1832  shutdown now
+ 1833  sudo protonvpn s
+ 1834  sudo protonvpn -f c
+ 1835  sudo protonvpn d
+ 1836  shutdown now
+ 1837  sudo protonvpn -f c
+ 1838  sudo protonvpn s
+ 1839  sudo protonvpn d
+ 1840  sudo protonvpn s
+ 1841  sudo protonvpn -f c
+ 1842  sudo protonvpn s
+ 1843  sudo protonvpn d
+ 1844  sudo protonvpn s
+ 1845  shutdown now
+ 1846  shutdown -r now
+ 1847  cd /home/willem/Documents/zakelijk/financieel/ING/transacties
+ 1848  conda activate base
+ 1849  pyspark
+ 1850  conda deactivate
+ 1851  cd /home/willem/Documents/zakelijk/financieel/ING/transacties
+ 1852  conda activate base
+ 1853  pyspark
+ 1854  sudo protonvpn s
+ 1855  sudo protonvpn -f c
+ 1856  sudo protonvpn s
+ 1857  sudo protonvpn d
+ 1858  shutdown now
+ 1859  sudo protonvpn s
+ 1860  sudo protonvpn -f c
+ 1861  sudo protonvpn s
+ 1862  sudo protonvpn -f c
+ 1863  sudo protonvpn s
+ 1864  sudo protonvpn d
+ 1865  sudo protonvpn s
+ 1866  sudo protonvpn -f c
+ 1867  sudo protonvpn s
+ 1868  sudo protonvpn d
+ 1869  sudo protonvpn s
+ 1870  sudo protonvpn -f c
+ 1871  sudo protonvpn s
+ 1872  history | grep 'openvpn'
+ 1873  sudo apt install -y openvpn dialog python3-pip python3-setuptools
+ 1874  sudo pip3 install protonvpn-cli --upgrade
+ 1875  sudo protonvpn d
+ 1876  sudo protonvpn s
+ 1877  sudo protonvpn --version
+ 1878  exit
+ 1879  shutdown now
+ 1880  sudo protonvpn s
+ 1881  sudo protonvpn d
+ 1882  sudo protonvpn -f c
+ 1883  sudo protonvpn s
+ 1884  sudo protonvpn -f c
+ 1885  sudo protonvpn s
+ 1886  sudo protonvpn d
+ 1887  sudo protonvpn s
+ 1888  shutdown now
+ 1889  sudo protonvpn s
+ 1890  sudo protonvpn -f c
+ 1891  sudo protonvpn s
+ 1892  sudo protonvpn -f c
+ 1893  sudo protonvpn s
+ 1894  sudo protonvpn d
+ 1895  lscpu
+ 1896  sudo protonvpn s
+ 1897  shutdown now
+ 1898  sudo protonvpn s
+ 1899  sudo protonvpn -f c
+ 1900  sudo protonvpn s
+ 1901  sudo protonvpn d
+ 1902  sudo protonvpn s
+ 1903  sudo protonvpn -f c
+ 1904  sudo protonvpn s
+ 1905  sudo protonvpn d
+ 1906  shutdown now
+ 1907  history | grep 'ip'
+ 1908  sudo apt install linssid
+ 1909  sudo linssid
+ 1910  netstat -r -n
+ 1911  nmap -Pn 192.168.2.254
+ 1912  shutdown -r now
+ 1913  sudo linssid
+ 1914  shutdown -r now
+ 1915  sudo linssid
+ 1916  shutdown now
+ 1917  shutdown -r now
+ 1918  sudo linssid
+ 1919  shutdown now
+ 1920  nmap -Pn 192.168.2.254
+ 1921  netstat -r -n
+ 1922  shutdown now
+ 1923  sudo linssid
+ 1924  sudo protonvpn s
+ 1925  sudo protonvpn -f c
+ 1926  sudo protonvpn s
+ 1927  sudo protonvpn -f c
+ 1928  sudo protonvpn s
+ 1929  sudo protonvpn -f c
+ 1930  sudo protonvpn s
+ 1931  cd /media/willem
+ 1932  ls -al
+ 1933  chmod 777 'Silver Seagate 2T Master Drive'
+ 1934  sudo chmod 777 'Silver Seagate 2T Master Drive'
+ 1935  ls -al
+ 1936  cd 'Silver Seagate 2T Master Drive'
+ 1937  ls -al
+ 1938  cd ..
+ 1939  rm -r 'Silver Seagate 2T Master Drive'
+ 1940  rmdir 'Silver Seagate 2T Master Drive'
+ 1941  sudo umount /media/willem/Silver Seagate 2T Master Drive
+ 1942  ls -al
+ 1943  sudo protonvpn s
+ 1944  echo ${user}
+ 1945  echo ${host-ip-address}
+ 1946  hostnamectl
+ 1947  ifconfig
+ 1948  sudo dhclient -d -nw wlp2s0
+ 1949  printenv
+ 1950  echo $USER
+ 1951  echo $LOCALHOST
+ 1952  $HOST
+ 1953  $HOSTNAME
+ 1954  echo $HOSTNAME
+ 1955  printenv | grep HOSTNAME
+ 1956  printenv | grep 'HOSTNAME'
+ 1957  env
+ 1958  env | grep 'HOSTNAME'
+ 1959  smartctl -a /dev/sda1 >> /home/willem/Documents/drive-report.txt
+ 1960  smartctl -a /dev/nvme0n1p1 >> /home/willem/Documents/drive-report.txt
+ 1961  smartctl -a /dev/nvme0n1p2 >> /home/willem/Documents/drive-report.txt
+ 1962  fsck -f -V /dev/nvme0n1p1
+ 1963  fsck -f -V /dev/nvme0n1p2
+ 1964  fsck -f -V /dev/sda1
+ 1965  exit
+ 1966  sudo fsck -f -V /dev/nvme0n1p2
+ 1967  sudo fsck -f -V /dev/nvme0n1p1
+ 1968  sudo fsck -f -V /dev/sda1
+ 1969  sudo fsck -f -V /dev/nvme0n1p1
+ 1970  sudo fsck -f -V /dev/sda1
+ 1971  shutdown -r now
+ 1972  lsblk
+ 1973  smartctl -a /dev/nvme0n1p1
+ 1974  sudo smartctl -a /dev/nvme0n1p1
+ 1975  sudo smartctl -a /dev/nvme0n1p2
+ 1976  hwinfo --short
+ 1977  sudo apt install hwinfo
+ 1978  hwinfo --short
+ 1979  lscpu
+ 1980  dmidecode | grep -A3 '^System Information'
+ 1981  sudo dmidecode | grep -A3 '^System Information'
+ 1982  sudo fsck -f -V /dev/nvme0n1p1
+ 1983  rep -i "Using input driver" /var/log/Xorg.0.log
+ 1984  sudo apt install rep
+ 1985  rep -i "Using input driver" /var/log/Xorg.0.log
+ 1986  grep -i "Using input driver" /var/log/Xorg.0.log
+ 1987  sudo fsck -f -V /dev/nvme0n1p1
+ 1988  shutdown
+ 1989  sudo protonvpn s
+ 1990  sudo protonvpn -f c
+ 1991  sudo protonvpn s
+ 1992  sudo protonvpn d
+ 1993  history
+willem@willem-Latitude-5590:~$ lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda           8:0    0   1,8T  0 disk
+└─sda1        8:1    0   1,8T  0 part /media/willem/Silver Seagate 2T Master Drive
+nvme0n1     259:0    0 238,5G  0 disk
+├─nvme0n1p1 259:1    0   512M  0 part /boot/efi
+└─nvme0n1p2 259:2    0   238G  0 part /
+willem@willem-Latitude-5590:~$ hostnamectl
+   Static hostname: willem-Latitude-5590
+         Icon name: computer-laptop
+           Chassis: laptop
+        Machine ID: 82929df7ee394b73b81252fe3b4e5020
+           Boot ID: 94fcee92e94146ef885cfaf798e5210c
+  Operating System: Linux Mint 19.3
+            Kernel: Linux 5.4.0-80-generic
+      Architecture: x86-64
+willem@willem-Latitude-5590:~$ cd App/
+willem@willem-Latitude-5590:~/App$ ls -la
+total 60
+drwxrwxr-x 15 willem willem 4096 May 29 21:04  .
+drwxr-xr-x 78 willem willem 4096 Jul 24 01:36  ..
+drwxrwxr-x  4 willem willem 4096 Jun 20  2019  ACBF_Editor
+drwxr-xr-x  6 willem willem 4096 Aug  8  2020  ApacheDirectoryStudio
+drwxr-xr-x  3 willem willem 4096 Mar  9  2019  intellij
+drwxr-xr-x  7 willem willem 4096 Jan  3  2020  Java
+drwxr-xr-x  7 willem willem 4096 Jun 23  2019  kafka_2.12-2.2.1
+drwxr-xr-x  8 willem willem 4096 Apr  6  2020  kafka_2.12-2.4.1
+drwxr-xr-x 36 willem willem 4096 Apr  2  2020  ksql-5.2.4
+drwxr-xr-x 12 willem willem 4096 Mar 10  2019  Oxygen_XML_Editor_20
+drwxr-xr-x  3 willem willem 4096 Mar  1 10:47 'Postman Agent'
+drwxrwxr-x  3 willem willem 4096 Aug  7  2020  PyCharm
+drwxr-xr-x 21 willem willem 4096 Mar 29  2020  schema-registry-5.3.3
+drwxr-xr-x 13 willem willem 4096 May  8 11:22  spark-2.4.8-bin-hadoop2.7
+drwxr-xr-x 13 willem willem 4096 Feb 22 03:44  spark-3.1.1-bin-hadoop2.7
+willem@willem-Latitude-5590:~/App$ cd spark-3
+bash: cd: spark-3: No such file or directory
+willem@willem-Latitude-5590:~/App$ cd spark-3.1.1-bin-hadoop2.7/
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7$ ls -la
+total 164
+drwxr-xr-x 13 willem willem  4096 Feb 22 03:44 .
+drwxrwxr-x 15 willem willem  4096 May 29 21:04 ..
+drwxr-xr-x  2 willem willem  4096 Feb 22 03:44 bin
+drwxr-xr-x  2 willem willem  4096 Feb 22 03:44 conf
+drwxr-xr-x  5 willem willem  4096 Feb 22 03:44 data
+drwxr-xr-x  4 willem willem  4096 Feb 22 03:44 examples
+drwxr-xr-x  2 willem willem 20480 Feb 22 03:44 jars
+drwxr-xr-x  4 willem willem  4096 Feb 22 03:44 kubernetes
+-rw-r--r--  1 willem willem 23235 Feb 22 03:44 LICENSE
+drwxr-xr-x  2 willem willem  4096 Feb 22 03:44 licenses
+-rw-r--r--  1 willem willem 57677 Feb 22 03:44 NOTICE
+drwxr-xr-x  7 willem willem  4096 Feb 22 03:44 python
+drwxr-xr-x  3 willem willem  4096 Feb 22 03:44 R
+-rw-r--r--  1 willem willem  4488 Feb 22 03:44 README.md
+-rw-r--r--  1 willem willem   183 Feb 22 03:44 RELEASE
+drwxr-xr-x  2 willem willem  4096 Feb 22 03:44 sbin
+drwxr-xr-x  2 willem willem  4096 Feb 22 03:44 yarn
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7$ cd sbin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ls -la
+total 120
+drwxr-xr-x  2 willem willem 4096 Feb 22 03:44 .
+drwxr-xr-x 13 willem willem 4096 Feb 22 03:44 ..
+-rwxr-xr-x  1 willem willem  981 Feb 22 03:44 decommission-slave.sh
+-rwxr-xr-x  1 willem willem 2028 Feb 22 03:44 decommission-worker.sh
+-rwxr-xr-x  1 willem willem  957 Feb 22 03:44 slaves.sh
+-rwxr-xr-x  1 willem willem 1429 Feb 22 03:44 spark-config.sh
+-rwxr-xr-x  1 willem willem 6333 Feb 22 03:44 spark-daemon.sh
+-rwxr-xr-x  1 willem willem 1264 Feb 22 03:44 spark-daemons.sh
+-rwxr-xr-x  1 willem willem 1192 Feb 22 03:44 start-all.sh
+-rwxr-xr-x  1 willem willem 1764 Feb 22 03:44 start-history-server.sh
+-rwxr-xr-x  1 willem willem 2097 Feb 22 03:44 start-master.sh
+-rwxr-xr-x  1 willem willem 1877 Feb 22 03:44 start-mesos-dispatcher.sh
+-rwxr-xr-x  1 willem willem 1425 Feb 22 03:44 start-mesos-shuffle-service.sh
+-rwxr-xr-x  1 willem willem  967 Feb 22 03:44 start-slave.sh
+-rwxr-xr-x  1 willem willem  969 Feb 22 03:44 start-slaves.sh
+-rwxr-xr-x  1 willem willem 2025 Feb 22 03:44 start-thriftserver.sh
+-rwxr-xr-x  1 willem willem 3245 Feb 22 03:44 start-worker.sh
+-rwxr-xr-x  1 willem willem 1560 Feb 22 03:44 start-workers.sh
+-rwxr-xr-x  1 willem willem 1481 Feb 22 03:44 stop-all.sh
+-rwxr-xr-x  1 willem willem 1056 Feb 22 03:44 stop-history-server.sh
+-rwxr-xr-x  1 willem willem 1080 Feb 22 03:44 stop-master.sh
+-rwxr-xr-x  1 willem willem 1227 Feb 22 03:44 stop-mesos-dispatcher.sh
+-rwxr-xr-x  1 willem willem 1084 Feb 22 03:44 stop-mesos-shuffle-service.sh
+-rwxr-xr-x  1 willem willem  965 Feb 22 03:44 stop-slave.sh
+-rwxr-xr-x  1 willem willem  967 Feb 22 03:44 stop-slaves.sh
+-rwxr-xr-x  1 willem willem 1066 Feb 22 03:44 stop-thriftserver.sh
+-rwxr-xr-x  1 willem willem 1569 Feb 22 03:44 stop-worker.sh
+-rwxr-xr-x  1 willem willem 1066 Feb 22 03:44 stop-workers.sh
+-rwxr-xr-x  1 willem willem 3399 Feb 22 03:44 workers.sh
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-master.sh
+starting org.apache.spark.deploy.master.Master, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.master.Master-1-willem-Latitude-5590.out
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-slave.sh spark://willem-Latitude-5590:7077
+This script is deprecated, use start-worker.sh
+starting org.apache.spark.deploy.worker.Worker, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.worker.Worker-1-willem-Latitude-5590.out
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./spark-submit \
+> --class net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp \
+> --master "willem-Latitude-5590:7077" \
+> /home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar
+bash: ./spark-submit: No such file or directory
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ cd ../bin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ./spark-submit \
+> --class net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp \
+> --master "willem-Latitude-5590:7077" \
+> /home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar
+21/07/24 02:43:34 WARN Utils: Your hostname, willem-Latitude-5590 resolves to a loopback address: 127.0.1.1; using 192.168.2.4 instead (on interface wlp2s0)
+21/07/24 02:43:34 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Exception in thread "main" org.apache.spark.SparkException: Master must either be yarn or start with spark, mesos, k8s, or local
+	at org.apache.spark.deploy.SparkSubmit.error(SparkSubmit.scala:959)
+	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:238)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:894)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1030)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1039)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ping willem-Latitude-5590
+PING willem-Latitude-5590 (127.0.1.1) 56(84) bytes of data.
+64 bytes from willem-Latitude-5590 (127.0.1.1): icmp_seq=1 ttl=64 time=0.099 ms
+64 bytes from willem-Latitude-5590 (127.0.1.1): icmp_seq=2 ttl=64 time=0.078 ms
+64 bytes from willem-Latitude-5590 (127.0.1.1): icmp_seq=3 ttl=64 time=0.041 ms
+64 bytes from willem-Latitude-5590 (127.0.1.1): icmp_seq=4 ttl=64 time=0.042 ms
+64 bytes from willem-Latitude-5590 (127.0.1.1): icmp_seq=5 ttl=64 time=0.057 ms
+^[64 bytes from willem-Latitude-5590 (127.0.1.1): icmp_seq=6 ttl=64 time=0.058 ms
+64 bytes from willem-Latitude-5590 (127.0.1.1): icmp_seq=7 ttl=64 time=0.089 ms
+64 bytes from willem-Latitude-5590 (127.0.1.1): icmp_seq=8 ttl=64 time=0.046 ms
+64 bytes from willem-Latitude-5590 (127.0.1.1): icmp_seq=9 ttl=64 time=0.076 ms
+^C
+--- willem-Latitude-5590 ping statistics ---
+9 packets transmitted, 9 received, 0% packet loss, time 8177ms
+rtt min/avg/max/mdev = 0.041/0.065/0.099/0.020 ms
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ping willem-Latitude-5590^C
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ./spark-submit \
+> --class net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp \
+> --master "192.168.2.4:7077" \
+> /home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar
+21/07/24 02:48:56 WARN Utils: Your hostname, willem-Latitude-5590 resolves to a loopback address: 127.0.1.1; using 192.168.2.4 instead (on interface wlp2s0)
+21/07/24 02:48:56 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Exception in thread "main" org.apache.spark.SparkException: Master must either be yarn or start with spark, mesos, k8s, or local
+	at org.apache.spark.deploy.SparkSubmit.error(SparkSubmit.scala:959)
+	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:238)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:894)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1030)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1039)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ../sbin
+bash: ../sbin: Is a directory
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ cd ../sbin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ifconfig
+br-3ab64aa7dfea: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.22.0.1  netmask 255.255.0.0  broadcast 172.22.255.255
+        ether 02:42:e4:a0:68:dc  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:b1:86:cd:06  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+docker_gwbridge: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.19.0.1  netmask 255.255.0.0  broadcast 172.19.255.255
+        ether 02:42:12:40:e8:5f  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s31f6: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether e4:b9:7a:71:a7:fd  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 16  memory 0xef300000-ef320000
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 7894  bytes 1173579 (1.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 7894  bytes 1173579 (1.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.2.4  netmask 255.255.255.0  broadcast 192.168.2.255
+        inet6 fe80::366b:5597:cf42:949  prefixlen 64  scopeid 0x20<link>
+        inet6 2a02:a466:a7ef:1:fd5b:7558:38af:5b0f  prefixlen 64  scopeid 0x0<global>
+        ether fc:77:74:54:30:80  txqueuelen 1000  (Ethernet)
+        RX packets 12522  bytes 6570055 (6.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 10951  bytes 4768765 (4.7 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./stop-all.sh
+localhost: ssh: connect to host localhost port 22: Connection refused
+stopping org.apache.spark.deploy.master.Master
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./stop-all.sh
+localhost: ssh: connect to host localhost port 22: Connection refused
+no org.apache.spark.deploy.master.Master to stop
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-master.sh
+starting org.apache.spark.deploy.master.Master, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.master.Master-1-willem-Latitude-5590.out
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-slave.sh spark://192.168.2.4:7077
+This script is deprecated, use start-worker.sh
+org.apache.spark.deploy.worker.Worker running as process 8888.  Stop it first.
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ cd ../bin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ./spark-submit \
+> --class net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp \
+> --master "192.168.2.4:7077" \
+> /home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar
+21/07/24 02:56:39 WARN Utils: Your hostname, willem-Latitude-5590 resolves to a loopback address: 127.0.1.1; using 192.168.2.4 instead (on interface wlp2s0)
+21/07/24 02:56:39 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Exception in thread "main" org.apache.spark.SparkException: Master must either be yarn or start with spark, mesos, k8s, or local
+	at org.apache.spark.deploy.SparkSubmit.error(SparkSubmit.scala:959)
+	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:238)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:894)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1030)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1039)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ SET SPARK_LOCAL_IP=192.168.2.4
+SET: command not found
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ export SPARK_LOCAL_IP=192.168.2.4
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ./spark-submit \
+> --class net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp \
+> --master "192.168.2.4:7077" \
+> /home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar
+Exception in thread "main" org.apache.spark.SparkException: Master must either be yarn or start with spark, mesos, k8s, or local
+	at org.apache.spark.deploy.SparkSubmit.error(SparkSubmit.scala:959)
+	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:238)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:894)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1030)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1039)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ cd ../sbin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./stop-all.sh
+localhost: ssh: connect to host localhost port 22: Connection refused
+stopping org.apache.spark.deploy.master.Master
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$
