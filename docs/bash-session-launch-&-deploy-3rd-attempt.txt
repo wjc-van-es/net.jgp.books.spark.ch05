@@ -1,0 +1,292 @@
+# AFTER editting ~/App/spark-3.1.1-bin-hadoop2.7/start-master.sh to use localhost as value for SPARK_MASTER_HOST
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-master.sh 
+Manual fix to force stand-alone on localhost
+SPARK_MASTER_HOST is set to  localhost
+starting org.apache.spark.deploy.master.Master, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.master.Master-1-willem-Latitude-5590.out
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ echo $SPARK_MASTER_HOST
+
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-worker.sh spark://localhost:7077
+starting org.apache.spark.deploy.worker.Worker, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.worker.Worker-1-willem-Latitude-5590.out
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ cd ../bin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ./spark-submit --class net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp --master "localhost:7077" /home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar
+21/07/26 00:05:07 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+About to throw 100000 darts, ready? Stay away from the target!
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/07/26 00:05:07 INFO SparkContext: Running Spark version 3.1.1
+21/07/26 00:05:07 INFO ResourceUtils: ==============================================================
+21/07/26 00:05:07 INFO ResourceUtils: No custom resources configured for spark.driver.
+21/07/26 00:05:07 INFO ResourceUtils: ==============================================================
+21/07/26 00:05:07 INFO SparkContext: Submitted application: JavaSparkPi on a cluster (via spark-submit)
+21/07/26 00:05:07 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+21/07/26 00:05:07 INFO ResourceProfile: Limiting resource is cpu
+21/07/26 00:05:07 INFO ResourceProfileManager: Added ResourceProfile id: 0
+21/07/26 00:05:07 INFO SecurityManager: Changing view acls to: willem
+21/07/26 00:05:07 INFO SecurityManager: Changing modify acls to: willem
+21/07/26 00:05:07 INFO SecurityManager: Changing view acls groups to: 
+21/07/26 00:05:07 INFO SecurityManager: Changing modify acls groups to: 
+21/07/26 00:05:07 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(willem); groups with view permissions: Set(); users  with modify permissions: Set(willem); groups with modify permissions: Set()
+21/07/26 00:05:08 INFO Utils: Successfully started service 'sparkDriver' on port 35529.
+21/07/26 00:05:08 INFO SparkEnv: Registering MapOutputTracker
+21/07/26 00:05:08 INFO SparkEnv: Registering BlockManagerMaster
+21/07/26 00:05:08 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/07/26 00:05:08 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/07/26 00:05:08 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/07/26 00:05:08 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-d37ecb8e-4f75-44a2-a7fa-c244a24c67aa
+21/07/26 00:05:08 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+21/07/26 00:05:08 INFO SparkEnv: Registering OutputCommitCoordinator
+21/07/26 00:05:08 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+21/07/26 00:05:08 INFO SparkUI: Bound SparkUI to 127.0.0.1, and started at http://localhost:4040
+21/07/26 00:05:08 INFO SparkContext: Added JAR file:/home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar at spark://localhost:35529/jars/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar with timestamp 1627250707798
+21/07/26 00:05:08 ERROR SparkContext: Error initializing SparkContext.
+org.apache.spark.SparkException: Could not parse Master URL: 'localhost:7077'
+	at org.apache.spark.SparkContext$.org$apache$spark$SparkContext$$createTaskScheduler(SparkContext.scala:2957)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:557)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2678)
+	at org.apache.spark.sql.SparkSession$Builder.$anonfun$getOrCreate$2(SparkSession.scala:942)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:936)
+	at net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp.start(PiComputeClusterSubmitJobApp.java:83)
+	at net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp.main(PiComputeClusterSubmitJobApp.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.JavaMainApplication.start(SparkApplication.scala:52)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:951)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1030)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1039)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+21/07/26 00:05:08 INFO SparkUI: Stopped Spark web UI at http://localhost:4040
+21/07/26 00:05:08 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+21/07/26 00:05:08 INFO MemoryStore: MemoryStore cleared
+21/07/26 00:05:08 INFO BlockManager: BlockManager stopped
+21/07/26 00:05:08 INFO BlockManagerMaster: BlockManagerMaster stopped
+21/07/26 00:05:08 WARN MetricsSystem: Stopping a MetricsSystem that is not running
+21/07/26 00:05:08 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+21/07/26 00:05:08 INFO SparkContext: Successfully stopped SparkContext
+Exception in thread "main" org.apache.spark.SparkException: Could not parse Master URL: 'localhost:7077'
+	at org.apache.spark.SparkContext$.org$apache$spark$SparkContext$$createTaskScheduler(SparkContext.scala:2957)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:557)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2678)
+	at org.apache.spark.sql.SparkSession$Builder.$anonfun$getOrCreate$2(SparkSession.scala:942)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:936)
+	at net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp.start(PiComputeClusterSubmitJobApp.java:83)
+	at net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp.main(PiComputeClusterSubmitJobApp.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.JavaMainApplication.start(SparkApplication.scala:52)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:951)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1030)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1039)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+21/07/26 00:05:08 INFO ShutdownHookManager: Shutdown hook called
+21/07/26 00:05:08 INFO ShutdownHookManager: Deleting directory /tmp/spark-7b2d66ac-2a73-4779-b64a-5918d9dbddea
+21/07/26 00:05:08 INFO ShutdownHookManager: Deleting directory /tmp/spark-f0f1f466-f8f7-4b7c-8d7a-7e6c32d6a887
+
+# It works with an added --master local[2] argument. So we can still deploy the uberjar with the bin/spark-submit,
+# but all output is now to the terminal no communication with the set up local cluster of a master and his worker
+# See also:
+# https://spark.apache.org/docs/latest/spark-standalone.html
+# https://spark.apache.org/docs/latest/submitting-applications.html
+# https://www.programmersought.com/article/78976059705/
+# https://unix.stackexchange.com/questions/16890/how-to-make-a-machine-accessible-from-the-lan-using-its-hostname
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ./spark-submit \
+--class net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp \
+--master local[2] \
+/home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar
+21/07/26 00:24:55 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+About to throw 100000 darts, ready? Stay away from the target!
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/07/26 00:24:55 INFO SparkContext: Running Spark version 3.1.1
+21/07/26 00:24:55 INFO ResourceUtils: ==============================================================
+21/07/26 00:24:55 INFO ResourceUtils: No custom resources configured for spark.driver.
+21/07/26 00:24:55 INFO ResourceUtils: ==============================================================
+21/07/26 00:24:55 INFO SparkContext: Submitted application: JavaSparkPi on a cluster (via spark-submit)
+21/07/26 00:24:55 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+21/07/26 00:24:55 INFO ResourceProfile: Limiting resource is cpu
+21/07/26 00:24:55 INFO ResourceProfileManager: Added ResourceProfile id: 0
+21/07/26 00:24:55 INFO SecurityManager: Changing view acls to: willem
+21/07/26 00:24:55 INFO SecurityManager: Changing modify acls to: willem
+21/07/26 00:24:55 INFO SecurityManager: Changing view acls groups to: 
+21/07/26 00:24:55 INFO SecurityManager: Changing modify acls groups to: 
+21/07/26 00:24:55 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(willem); groups with view permissions: Set(); users  with modify permissions: Set(willem); groups with modify permissions: Set()
+21/07/26 00:24:56 INFO Utils: Successfully started service 'sparkDriver' on port 40791.
+21/07/26 00:24:56 INFO SparkEnv: Registering MapOutputTracker
+21/07/26 00:24:56 INFO SparkEnv: Registering BlockManagerMaster
+21/07/26 00:24:56 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/07/26 00:24:56 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/07/26 00:24:56 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/07/26 00:24:56 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-a2cea223-910e-4719-8184-1677033b3252
+21/07/26 00:24:56 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+21/07/26 00:24:56 INFO SparkEnv: Registering OutputCommitCoordinator
+21/07/26 00:24:56 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+21/07/26 00:24:56 INFO SparkUI: Bound SparkUI to 127.0.0.1, and started at http://localhost:4040
+21/07/26 00:24:56 INFO SparkContext: Added JAR file:/home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar at spark://localhost:40791/jars/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar with timestamp 1627251895751
+21/07/26 00:24:56 INFO Executor: Starting executor ID driver on host localhost
+21/07/26 00:24:56 INFO Executor: Fetching spark://localhost:40791/jars/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar with timestamp 1627251895751
+21/07/26 00:24:56 INFO TransportClientFactory: Successfully created connection to localhost/127.0.0.1:40791 after 31 ms (0 ms spent in bootstraps)
+21/07/26 00:24:56 INFO Utils: Fetching spark://localhost:40791/jars/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar to /tmp/spark-79ddc215-a1ac-43ef-97f7-609264e06488/userFiles-d7cf096c-47ff-48d8-8488-fd7f7fc0204f/fetchFileTemp6384445444752843440.tmp
+21/07/26 00:24:56 INFO Executor: Adding file:/tmp/spark-79ddc215-a1ac-43ef-97f7-609264e06488/userFiles-d7cf096c-47ff-48d8-8488-fd7f7fc0204f/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar to class loader
+21/07/26 00:24:56 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39965.
+21/07/26 00:24:56 INFO NettyBlockTransferService: Server created on localhost:39965
+21/07/26 00:24:56 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/07/26 00:24:56 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, localhost, 39965, None)
+21/07/26 00:24:56 INFO BlockManagerMasterEndpoint: Registering block manager localhost:39965 with 366.3 MiB RAM, BlockManagerId(driver, localhost, 39965, None)
+21/07/26 00:24:56 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, localhost, 39965, None)
+21/07/26 00:24:56 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, localhost, 39965, None)
+Session initialized in 1479 ms
+21/07/26 00:24:58 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/willem/App/spark-3.1.1-bin-hadoop2.7/bin/spark-warehouse').
+21/07/26 00:24:58 INFO SharedState: Warehouse path is 'file:/home/willem/App/spark-3.1.1-bin-hadoop2.7/bin/spark-warehouse'.
+21/07/26 00:24:59 INFO CodeGenerator: Code generated in 155.100947 ms
+Initial dataframe built in 3010 ms
+Throwing darts done in 89 ms
+21/07/26 00:25:01 INFO CodeGenerator: Code generated in 12.860436 ms
+21/07/26 00:25:02 INFO SparkContext: Starting job: reduce at PiComputeClusterSubmitJobApp.java:105
+21/07/26 00:25:02 INFO DAGScheduler: Got job 0 (reduce at PiComputeClusterSubmitJobApp.java:105) with 2 output partitions
+21/07/26 00:25:02 INFO DAGScheduler: Final stage: ResultStage 0 (reduce at PiComputeClusterSubmitJobApp.java:105)
+21/07/26 00:25:02 INFO DAGScheduler: Parents of final stage: List()
+21/07/26 00:25:02 INFO DAGScheduler: Missing parents: List()
+21/07/26 00:25:02 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[5] at reduce at PiComputeClusterSubmitJobApp.java:105), which has no missing parents
+21/07/26 00:25:02 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 9.2 KiB, free 366.3 MiB)
+21/07/26 00:25:02 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 4.6 KiB, free 366.3 MiB)
+21/07/26 00:25:02 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:39965 (size: 4.6 KiB, free: 366.3 MiB)
+21/07/26 00:25:02 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1383
+21/07/26 00:25:02 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (MapPartitionsRDD[5] at reduce at PiComputeClusterSubmitJobApp.java:105) (first 15 tasks are for partitions Vector(0, 1))
+21/07/26 00:25:02 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks resource profile 0
+21/07/26 00:25:02 WARN TaskSetManager: Stage 0 contains a task of very large size (1615 KiB). The maximum recommended task size is 1000 KiB.
+21/07/26 00:25:02 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (localhost, executor driver, partition 0, PROCESS_LOCAL, 1654620 bytes) taskResourceAssignments Map()
+21/07/26 00:25:02 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (localhost, executor driver, partition 1, PROCESS_LOCAL, 1654620 bytes) taskResourceAssignments Map()
+21/07/26 00:25:02 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+21/07/26 00:25:02 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+21/07/26 00:25:03 INFO CodeGenerator: Code generated in 13.640822 ms
+1005 operations done so far
+2005 operations done so far
+3000 operations done so far
+4000 operations done so far
+5000 operations done so far
+5000 operations done so far
+6000 operations done so far
+7000 operations done so far
+8000 operations done so far
+9000 operations done so far
+10001 operations done so far
+11000 operations done so far
+12000 operations done so far
+13000 operations done so far
+14000 operations done so far
+15000 operations done so far
+16000 operations done so far
+17036 operations done so far
+18000 operations done so far
+19000 operations done so far
+20000 operations done so far
+21000 operations done so far
+22000 operations done so far
+23000 operations done so far
+24002 operations done so far
+25000 operations done so far
+26000 operations done so far
+27000 operations done so far
+28000 operations done so far
+29000 operations done so far
+30000 operations done so far
+31000 operations done so far
+32000 operations done so far
+33000 operations done so far
+34000 operations done so far
+35000 operations done so far
+36000 operations done so far
+37001 operations done so far
+38000 operations done so far
+39000 operations done so far
+40001 operations done so far
+41000 operations done so far
+42000 operations done so far
+43000 operations done so far
+44000 operations done so far
+45000 operations done so far
+46000 operations done so far
+47000 operations done so far
+48000 operations done so far
+49000 operations done so far
+50000 operations done so far
+51000 operations done so far
+52000 operations done so far
+53000 operations done so far
+54000 operations done so far
+55001 operations done so far
+56000 operations done so far
+57000 operations done so far
+58001 operations done so far
+59000 operations done so far
+60000 operations done so far
+61000 operations done so far
+62000 operations done so far
+63000 operations done so far
+64000 operations done so far
+65000 operations done so far
+66000 operations done so far
+66000 operations done so far
+67000 operations done so far
+68000 operations done so far
+69000 operations done so far
+70000 operations done so far
+71000 operations done so far
+72118 operations done so far
+73000 operations done so far
+74000 operations done so far
+75000 operations done so far
+76000 operations done so far
+77000 operations done so far
+78000 operations done so far
+79000 operations done so far
+80000 operations done so far
+81000 operations done so far
+82000 operations done so far
+83000 operations done so far
+84000 operations done so far
+85000 operations done so far
+86000 operations done so far
+87000 operations done so far
+88000 operations done so far
+89000 operations done so far
+90000 operations done so far
+91000 operations done so far
+92000 operations done so far
+93000 operations done so far
+94000 operations done so far
+95000 operations done so far
+96000 operations done so far
+97000 operations done so far
+98000 operations done so far
+21/07/26 00:25:03 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1266 bytes result sent to driver
+21/07/26 00:25:03 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1266 bytes result sent to driver
+21/07/26 00:25:03 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1077 ms on localhost (executor driver) (1/2)
+21/07/26 00:25:03 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 983 ms on localhost (executor driver) (2/2)
+21/07/26 00:25:03 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+21/07/26 00:25:03 INFO DAGScheduler: ResultStage 0 (reduce at PiComputeClusterSubmitJobApp.java:105) finished in 1.312 s
+21/07/26 00:25:03 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+21/07/26 00:25:03 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+21/07/26 00:25:03 INFO DAGScheduler: Job 0 finished: reduce at PiComputeClusterSubmitJobApp.java:105, took 1.370080 s
+Analyzing result in 3139 ms
+Pi is roughly 3.14384
+21/07/26 00:25:03 INFO SparkUI: Stopped Spark web UI at http://localhost:4040
+21/07/26 00:25:03 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+21/07/26 00:25:03 INFO MemoryStore: MemoryStore cleared
+21/07/26 00:25:03 INFO BlockManager: BlockManager stopped
+21/07/26 00:25:03 INFO BlockManagerMaster: BlockManagerMaster stopped
+21/07/26 00:25:03 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+21/07/26 00:25:03 INFO SparkContext: Successfully stopped SparkContext
+21/07/26 00:25:03 INFO ShutdownHookManager: Shutdown hook called
+21/07/26 00:25:03 INFO ShutdownHookManager: Deleting directory /tmp/spark-356b45fb-293c-4ab4-80a9-ca3591af5233
+21/07/26 00:25:03 INFO ShutdownHookManager: Deleting directory /tmp/spark-79ddc215-a1ac-43ef-97f7-609264e06488
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ 

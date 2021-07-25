@@ -1,0 +1,104 @@
+willem@willem-Latitude-5590:~$ cd App/spark-3.1.1-bin-hadoop2.7/sbin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-master.sh
+starting org.apache.spark.deploy.master.Master, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.master.Master-1-willem-Latitude-5590.out
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-worker.sh spark://192.168.2.4:7077
+starting org.apache.spark.deploy.worker.Worker, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.worker.Worker-1-willem-Latitude-5590.out
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./stop-all.sh
+localhost: ssh: connect to host localhost port 22: Connection refused
+stopping org.apache.spark.deploy.master.Master
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ export SPARK_MASTER_HOST=192.168.2.4
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ echo $SPARK_MASTER_HOST
+192.168.2.4
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-master.sh
+starting org.apache.spark.deploy.master.Master, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.master.Master-1-willem-Latitude-5590.out
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-worker.sh spark://$SPARK_MASTER_HOST:7077
+starting org.apache.spark.deploy.worker.Worker, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.worker.Worker-1-willem-Latitude-5590.out
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ cd ../bin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ls -al
+total 124
+drwxr-xr-x  2 willem willem  4096 Feb 22 03:44 .
+drwxr-xr-x 15 willem willem  4096 Jul 24 02:26 ..
+-rwxr-xr-x  1 willem willem  1089 Feb 22 03:44 beeline
+-rw-r--r--  1 willem willem  1064 Feb 22 03:44 beeline.cmd
+-rwxr-xr-x  1 willem willem 10965 Feb 22 03:44 docker-image-tool.sh
+-rwxr-xr-x  1 willem willem  1935 Feb 22 03:44 find-spark-home
+-rw-r--r--  1 willem willem  2685 Feb 22 03:44 find-spark-home.cmd
+-rw-r--r--  1 willem willem  2337 Feb 22 03:44 load-spark-env.cmd
+-rw-r--r--  1 willem willem  2435 Feb 22 03:44 load-spark-env.sh
+-rwxr-xr-x  1 willem willem  2634 Feb 22 03:44 pyspark
+-rw-r--r--  1 willem willem  1540 Feb 22 03:44 pyspark2.cmd
+-rw-r--r--  1 willem willem  1170 Feb 22 03:44 pyspark.cmd
+-rwxr-xr-x  1 willem willem  1030 Feb 22 03:44 run-example
+-rw-r--r--  1 willem willem  1223 Feb 22 03:44 run-example.cmd
+-rwxr-xr-x  1 willem willem  3539 Feb 22 03:44 spark-class
+-rwxr-xr-x  1 willem willem  2812 Feb 22 03:44 spark-class2.cmd
+-rw-r--r--  1 willem willem  1180 Feb 22 03:44 spark-class.cmd
+-rwxr-xr-x  1 willem willem  1039 Feb 22 03:44 sparkR
+-rw-r--r--  1 willem willem  1097 Feb 22 03:44 sparkR2.cmd
+-rw-r--r--  1 willem willem  1168 Feb 22 03:44 sparkR.cmd
+-rwxr-xr-x  1 willem willem  3122 Feb 22 03:44 spark-shell
+-rw-r--r--  1 willem willem  1818 Feb 22 03:44 spark-shell2.cmd
+-rw-r--r--  1 willem willem  1178 Feb 22 03:44 spark-shell.cmd
+-rwxr-xr-x  1 willem willem  1065 Feb 22 03:44 spark-sql
+-rw-r--r--  1 willem willem  1118 Feb 22 03:44 spark-sql2.cmd
+-rw-r--r--  1 willem willem  1173 Feb 22 03:44 spark-sql.cmd
+-rwxr-xr-x  1 willem willem  1040 Feb 22 03:44 spark-submit
+-rw-r--r--  1 willem willem  1155 Feb 22 03:44 spark-submit2.cmd
+-rw-r--r--  1 willem willem  1180 Feb 22 03:44 spark-submit.cmd
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ./spark-submit \
+> --class net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp \
+> --master "$SPARK_MASTER_HOST:7077" \
+> /home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar
+21/07/25 22:35:40 WARN Utils: Your hostname, willem-Latitude-5590 resolves to a loopback address: 127.0.1.1; using 192.168.2.4 instead (on interface wlp2s0)
+21/07/25 22:35:40 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Exception in thread "main" org.apache.spark.SparkException: Master must either be yarn or start with spark, mesos, k8s, or local
+	at org.apache.spark.deploy.SparkSubmit.error(SparkSubmit.scala:959)
+	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:238)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:894)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1030)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1039)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ./stop-all.sh
+bash: ./stop-all.sh: No such file or directory
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ cd ../sbin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./stop-all.sh
+localhost: ssh: connect to host localhost port 22: Connection refused
+stopping org.apache.spark.deploy.master.Master
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ export SPARK_MASTER_HOST=localhost
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ echo $SPARK_MASTER_HOST
+localhost
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-master.sh
+starting org.apache.spark.deploy.master.Master, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.master.Master-1-willem-Latitude-5590.out
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./spark-submit --class net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp --master "$SPARK_MASTER_HOST:7077" /home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar
+bash: ./spark-submit: No such file or directory
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./stop-all.sh
+localhost: ssh: connect to host localhost port 22: Connection refused
+stopping org.apache.spark.deploy.master.Master
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ export SPARK_MASTER_HOST=willem-Latitude-5590
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ echo $SPARK_MASTER_HOST
+willem-Latitude-5590
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-master.sh
+starting org.apache.spark.deploy.master.Master, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.master.Master-1-willem-Latitude-5590.out
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-worker.sh spark://$SPARK_MASTER_HOST:7077
+org.apache.spark.deploy.worker.Worker running as process 7397.  Stop it first.
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ kill -9 7397
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-worker.sh spark://$SPARK_MASTER_HOST:7077
+starting org.apache.spark.deploy.worker.Worker, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.worker.Worker-1-willem-Latitude-5590.out
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ cd ../bin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ./spark-submit --class net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp --master "$SPARK_MASTER_HOST:7077" /home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar
+21/07/25 23:03:54 WARN Utils: Your hostname, willem-Latitude-5590 resolves to a loopback address: 127.0.1.1; using 192.168.2.4 instead (on interface wlp2s0)
+21/07/25 23:03:54 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Exception in thread "main" org.apache.spark.SparkException: Master must either be yarn or start with spark, mesos, k8s, or local
+	at org.apache.spark.deploy.SparkSubmit.error(SparkSubmit.scala:959)
+	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:238)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:894)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1030)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1039)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$
