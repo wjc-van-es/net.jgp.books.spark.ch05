@@ -156,6 +156,14 @@ Completed Applications we could click on its link and under Removed Executors we
 stderr logs The same executor could also be found and opened on the worker webpage.
 
 The logs can be helpful in case of troubleshooting or optimization.
+
+Ultimately we can stop helper and master
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ cd ../sbin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./stop-worker.sh
+stopping org.apache.spark.deploy.worker.Worker
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./stop-master.sh
+stopping org.apache.spark.deploy.master.Master
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$
 ===================================================================
 The root cause why things could not be deployed earlier was that the hostname pointed to 127.0.0.1 earlier in
 /etc/hosts
