@@ -1,0 +1,179 @@
+We tried to recreate the deployment and launch of PiComputeClusterSubmitJobApp in a cluster as described in chapter 6
+section 6.4.
+
+The First problem was that we have only one notebook to run this example on instead of the 4 nodes configuration
+described in Figure 6.3. This shouldn't be a big deal, however, as running 1 master and 1 helper process on the same node
+should be sufficient for this example. Doing so, is in principle, the same as running the application on four nodes.
+As we see how
+-   we start a master process
+-   we start subsequent helper processes (in our case only one, but starting more helpers on other nodes work the same)
+-   creating the uber-jar with all instructions in the pom.xml by executing mvn clean package
+-   deploy the application inside the uber-jar on the master, which is responsible for passing it onto all available helpers
+    (in our case only one on the same node)
+-------------------------------------------
+There was a problem, however, with the hostname being linked to 127.0.0.1 (localhost) in /etc/hosts
+we commented out that line and that was actually enough. We reserved the current ip address to the laptop's MAC address
+and hostname in our modem's admin, but that isn't really necessary as we never refer to literal ip addresses in this
+example (but during troubleshooting we did).
+We also checked our Firewall, but no additional rules were necessary, since all network communication takes place on
+the single laptop node.
+The last thing I forced was in $SPARK_INSTALL_HOME/sbin/start-master.sh (This is most likely unnecessary and can be removed)
+# Starts the master on the machine this script is executed on.
+# MANUAL FIX TO FORCE STAND-ALONE
+echo "Manual fix to force stand-alone on willem-Latitude-5590"
+export SPARK_MASTER_HOST=willem-Latitude-5590
+echo "SPARK_MASTER_HOST is set to " $SPARK_MASTER_HOST
+# REMOVE ALL ABOVE TO REVERT TO ORIGINAL OPERATING SETTINGS
+
+---------------------------------------------
+Then the actual start up of 1 master and 1 helper on our laptop and subsequently deploy and run our application as
+follows:
+
+willem@willem-Latitude-5590:~$ cd App/spark-3.1.1-bin-hadoop2.7/sbin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-master.sh
+Manual fix to force stand-alone on willem-Latitude-5590
+SPARK_MASTER_HOST is set to  willem-Latitude-5590
+starting org.apache.spark.deploy.master.Master, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.master.Master-1-willem-Latitude-5590.out
+# Now we can start a browser on http://localhost:8080/ and see Spark Master at URL spark://willem-Latitude-5590:7077
+# With zero Workers and zero running or completed applications
+# With the URL info for the master we can start a worker on the same node (in the same terminal)
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-worker.sh spark://willem-Latitude-5590:7077
+starting org.apache.spark.deploy.worker.Worker, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.worker.Worker-1-willem-Latitude-5590.out
+# Now if we refres the web page http://localhost:8080/ we see a link to 1 worker webpage at http://127.0.0.1:8081/
+# Now we deploy the uber-jar with $SPARK_INSTALL_HOME/bin/spark-submit
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ cd ../bin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ./spark-submit \
+--class net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp \
+--master "spark://willem-Latitude-5590:7077" \
+/home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar
+21/07/30 18:37:38 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+About to throw 100000 darts, ready? Stay away from the target!
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/07/30 18:37:38 INFO SparkContext: Running Spark version 3.1.1
+21/07/30 18:37:38 INFO ResourceUtils: ==============================================================
+21/07/30 18:37:38 INFO ResourceUtils: No custom resources configured for spark.driver.
+21/07/30 18:37:38 INFO ResourceUtils: ==============================================================
+21/07/30 18:37:38 INFO SparkContext: Submitted application: JavaSparkPi on a cluster (via spark-submit)
+21/07/30 18:37:38 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+21/07/30 18:37:38 INFO ResourceProfile: Limiting resource is cpu
+21/07/30 18:37:38 INFO ResourceProfileManager: Added ResourceProfile id: 0
+21/07/30 18:37:39 INFO SecurityManager: Changing view acls to: willem
+21/07/30 18:37:39 INFO SecurityManager: Changing modify acls to: willem
+21/07/30 18:37:39 INFO SecurityManager: Changing view acls groups to:
+21/07/30 18:37:39 INFO SecurityManager: Changing modify acls groups to:
+21/07/30 18:37:39 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(willem); groups with view permissions: Set(); users  with modify permissions: Set(willem); groups with modify permissions: Set()
+21/07/30 18:37:39 INFO Utils: Successfully started service 'sparkDriver' on port 33415.
+21/07/30 18:37:39 INFO SparkEnv: Registering MapOutputTracker
+21/07/30 18:37:39 INFO SparkEnv: Registering BlockManagerMaster
+21/07/30 18:37:39 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/07/30 18:37:39 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/07/30 18:37:39 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/07/30 18:37:39 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-57ecdc31-19b9-45ba-94fc-0bc7bbd9f1b8
+21/07/30 18:37:39 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+21/07/30 18:37:39 INFO SparkEnv: Registering OutputCommitCoordinator
+21/07/30 18:37:39 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+21/07/30 18:37:39 INFO SparkUI: Bound SparkUI to 127.0.0.1, and started at http://localhost:4040
+21/07/30 18:37:39 INFO SparkContext: Added JAR file:/home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar at spark://localhost:33415/jars/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar with timestamp 1627663058853
+21/07/30 18:37:40 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://willem-Latitude-5590:7077...
+21/07/30 18:37:40 INFO TransportClientFactory: Successfully created connection to willem-Latitude-5590/192.168.2.4:7077 after 35 ms (0 ms spent in bootstraps)
+21/07/30 18:37:40 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20210730183740-0000
+21/07/30 18:37:40 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45841.
+21/07/30 18:37:40 INFO NettyBlockTransferService: Server created on localhost:45841
+21/07/30 18:37:40 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/07/30 18:37:40 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, localhost, 45841, None)
+21/07/30 18:37:40 INFO BlockManagerMasterEndpoint: Registering block manager localhost:45841 with 366.3 MiB RAM, BlockManagerId(driver, localhost, 45841, None)
+21/07/30 18:37:40 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, localhost, 45841, None)
+21/07/30 18:37:40 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, localhost, 45841, None)
+21/07/30 18:37:40 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20210730183740-0000/0 on worker-20210730183624-127.0.0.1-34711 (127.0.0.1:34711) with 8 core(s)
+21/07/30 18:37:40 INFO StandaloneSchedulerBackend: Granted executor ID app-20210730183740-0000/0 on hostPort 127.0.0.1:34711 with 8 core(s), 4.0 GiB RAM
+21/07/30 18:37:40 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20210730183740-0000/0 is now RUNNING
+21/07/30 18:37:40 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+Session initialized in 2058 ms
+21/07/30 18:37:42 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/willem/App/spark-3.1.1-bin-hadoop2.7/bin/spark-warehouse').
+21/07/30 18:37:42 INFO SharedState: Warehouse path is 'file:/home/willem/App/spark-3.1.1-bin-hadoop2.7/bin/spark-warehouse'.
+21/07/30 18:37:43 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (127.0.0.1:58424) with ID 0,  ResourceProfileId 0
+21/07/30 18:37:43 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.0.1:46773 with 2004.6 MiB RAM, BlockManagerId(0, 127.0.0.1, 46773, None)
+21/07/30 18:37:44 INFO CodeGenerator: Code generated in 191.855678 ms
+Initial dataframe built in 4239 ms
+Throwing darts done in 99 ms
+21/07/30 18:37:46 INFO CodeGenerator: Code generated in 9.725757 ms
+21/07/30 18:37:47 INFO SparkContext: Starting job: reduce at PiComputeClusterSubmitJobApp.java:105
+21/07/30 18:37:47 INFO DAGScheduler: Got job 0 (reduce at PiComputeClusterSubmitJobApp.java:105) with 8 output partitions
+21/07/30 18:37:47 INFO DAGScheduler: Final stage: ResultStage 0 (reduce at PiComputeClusterSubmitJobApp.java:105)
+21/07/30 18:37:47 INFO DAGScheduler: Parents of final stage: List()
+21/07/30 18:37:47 INFO DAGScheduler: Missing parents: List()
+21/07/30 18:37:47 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[5] at reduce at PiComputeClusterSubmitJobApp.java:105), which has no missing parents
+21/07/30 18:37:47 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 9.3 KiB, free 366.3 MiB)
+21/07/30 18:37:47 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 4.6 KiB, free 366.3 MiB)
+21/07/30 18:37:47 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:45841 (size: 4.6 KiB, free: 366.3 MiB)
+21/07/30 18:37:47 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1383
+21/07/30 18:37:47 INFO DAGScheduler: Submitting 8 missing tasks from ResultStage 0 (MapPartitionsRDD[5] at reduce at PiComputeClusterSubmitJobApp.java:105) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+21/07/30 18:37:47 INFO TaskSchedulerImpl: Adding task set 0.0 with 8 tasks resource profile 0
+21/07/30 18:37:47 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (127.0.0.1, executor 0, partition 0, PROCESS_LOCAL, 417124 bytes) taskResourceAssignments Map()
+21/07/30 18:37:47 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (127.0.0.1, executor 0, partition 1, PROCESS_LOCAL, 417124 bytes) taskResourceAssignments Map()
+21/07/30 18:37:47 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (127.0.0.1, executor 0, partition 2, PROCESS_LOCAL, 417124 bytes) taskResourceAssignments Map()
+21/07/30 18:37:47 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (127.0.0.1, executor 0, partition 3, PROCESS_LOCAL, 417124 bytes) taskResourceAssignments Map()
+21/07/30 18:37:47 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (127.0.0.1, executor 0, partition 4, PROCESS_LOCAL, 417124 bytes) taskResourceAssignments Map()
+21/07/30 18:37:47 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5) (127.0.0.1, executor 0, partition 5, PROCESS_LOCAL, 417124 bytes) taskResourceAssignments Map()
+21/07/30 18:37:47 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (127.0.0.1, executor 0, partition 6, PROCESS_LOCAL, 417124 bytes) taskResourceAssignments Map()
+21/07/30 18:37:47 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7) (127.0.0.1, executor 0, partition 7, PROCESS_LOCAL, 417124 bytes) taskResourceAssignments Map()
+21/07/30 18:37:48 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 127.0.0.1:46773 (size: 4.6 KiB, free: 2004.6 MiB)
+21/07/30 18:37:50 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 2695 ms on 127.0.0.1 (executor 0) (1/8)
+21/07/30 18:37:50 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 2614 ms on 127.0.0.1 (executor 0) (2/8)
+21/07/30 18:37:50 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 2629 ms on 127.0.0.1 (executor 0) (3/8)
+21/07/30 18:37:50 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 2595 ms on 127.0.0.1 (executor 0) (4/8)
+21/07/30 18:37:50 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 2642 ms on 127.0.0.1 (executor 0) (5/8)
+21/07/30 18:37:50 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 2584 ms on 127.0.0.1 (executor 0) (6/8)
+21/07/30 18:37:50 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 2661 ms on 127.0.0.1 (executor 0) (7/8)
+21/07/30 18:37:50 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 2606 ms on 127.0.0.1 (executor 0) (8/8)
+21/07/30 18:37:50 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+21/07/30 18:37:50 INFO DAGScheduler: ResultStage 0 (reduce at PiComputeClusterSubmitJobApp.java:105) finished in 2.944 s
+21/07/30 18:37:50 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+21/07/30 18:37:50 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+21/07/30 18:37:50 INFO DAGScheduler: Job 0 finished: reduce at PiComputeClusterSubmitJobApp.java:105, took 3.006480 s
+Analyzing result in 4883 ms
+Pi is roughly 3.1446
+21/07/30 18:37:50 INFO SparkUI: Stopped Spark web UI at http://localhost:4040
+21/07/30 18:37:50 INFO StandaloneSchedulerBackend: Shutting down all executors
+21/07/30 18:37:50 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Asking each executor to shut down
+21/07/30 18:37:50 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+21/07/30 18:37:50 INFO MemoryStore: MemoryStore cleared
+21/07/30 18:37:50 INFO BlockManager: BlockManager stopped
+21/07/30 18:37:50 INFO BlockManagerMaster: BlockManagerMaster stopped
+21/07/30 18:37:50 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+21/07/30 18:37:50 INFO SparkContext: Successfully stopped SparkContext
+21/07/30 18:37:50 INFO ShutdownHookManager: Shutdown hook called
+21/07/30 18:37:50 INFO ShutdownHookManager: Deleting directory /tmp/spark-d9ace1b0-017a-4022-9e5b-fa8fc696478d
+21/07/30 18:37:50 INFO ShutdownHookManager: Deleting directory /tmp/spark-38eb5f0e-2d1a-43f7-a3a8-33d2e596ed0d
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$
+# You saw in the lines above all stout in the terminal including the result of the calculation:
+# 21/07/30 18:37:50 INFO DAGScheduler: Job 0 finished: reduce at PiComputeClusterSubmitJobApp.java:105, took 3.006480 s
+# Analyzing result in 4883 ms
+# Pi is roughly 3.1446
+
+On the master's webpage http://localhost:8080/ we saw briefly an Application under Running Applications and then under
+Completed Applications we could click on its link and under Removed Executors we could click on both the stdout and
+stderr logs The same executor could also be found and opened on the worker webpage.
+
+The logs can be helpful in case of troubleshooting or optimization.
+===================================================================
+The root cause why things could not be deployed earlier was that the hostname pointed to 127.0.0.1 earlier in
+/etc/hosts
+We could get it working while embracing localhost instead of willem-latitude-5590
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-master.sh
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-worker.sh spark://localhost:7077
+
+But then we had to add the --master local[2] argument to our ./spark-submit command to get it to work
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ cd ../bin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ./spark-submit \
+--class net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp \
+--master local[2] \
+/home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar
+
+And the master we started earlier in our commandline couldn't see the started application (as it was not on its
+webpage http://localhost:8080/ and the stdoutput & erroutput logging was added in the terminal.
+So all in all that was not the deployment on the running master and worker that we had planned.
+But from this we learned we can still deploy and run an application on a local master even if we had omitted
+the org.apache.spark.sql.SparkSession.Builder.master call from the code when defining the building of a
+org.apache.spark.sql.SparkSession instance as is the case in the
+net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp.start method

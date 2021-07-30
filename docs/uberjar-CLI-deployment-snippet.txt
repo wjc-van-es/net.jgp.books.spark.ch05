@@ -3,3 +3,17 @@ cd ../bin
 --class net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp \
 --master "$SPARK_MASTER_HOST:7077" \
 /home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar
+
+
+willem@willem-Latitude-5590:~$ cd App/spark-3.1.1-bin-hadoop2.7/sbin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-master.sh
+Manual fix to force stand-alone on localhost
+SPARK_MASTER_HOST is set to  willem-Latitude-5590
+starting org.apache.spark.deploy.master.Master, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.master.Master-1-willem-Latitude-5590.out
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ ./start-worker.sh spark://willem-Latitude-5590:7077
+starting org.apache.spark.deploy.worker.Worker, logging to /home/willem/App/spark-3.1.1-bin-hadoop2.7/logs/spark-willem-org.apache.spark.deploy.worker.Worker-1-willem-Latitude-5590.out
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/sbin$ cd ../bin
+willem@willem-Latitude-5590:~/App/spark-3.1.1-bin-hadoop2.7/bin$ ./spark-submit \
+--class net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp \
+--master "spark://willem-Latitude-5590:7077" \
+/home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar

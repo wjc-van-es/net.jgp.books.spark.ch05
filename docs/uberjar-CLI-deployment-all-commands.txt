@@ -1,0 +1,8 @@
+cd App/spark-3.1.1-bin-hadoop2.7/sbin
+./start-master.sh
+./start-worker.sh spark://willem-Latitude-5590:7077
+cd ../bin
+./spark-submit \
+--class net.jgp.books.spark.ch05.lab210_pi_compute_cluster_submit_job.PiComputeClusterSubmitJobApp \
+--master "spark://willem-Latitude-5590:7077" \
+/home/willem/resources/git/net.jgp.books.spark.ch05/target/spark-in-action2-chapter05-1.0.0-SNAPSHOT-uber.jar
